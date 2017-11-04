@@ -1,101 +1,83 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="en">
 <head>
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
     <link rel="icon" href="resources/image/map_icon.png">
     <title>Relief Map</title>
-    <!-- Stylesheet -->
     <link href="resources/css/ReliefMap.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-
-    <!-- JS -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <script src="resources/js/JSFunctions.js"></script>
-
-
+    
+    <style>
+        .navbar{
+            margin-bottom:0px;
+        }
+        .navbar-btn{
+            margin-bottom:0px;
+        }
+    </style>
 </head>
 <body>
-    <div id="canvas_icon">
-        <div id="current_location">
-            <img class="icon" src="resources/image/icon-current_location.png" alt="Currents Album Cover"/>
-            <p>YOU ARE HERE</p>
-        </div>
-
-        <div id="icon_first_aid1">
-            <a href="#" title="First Aid" data-html="true" data-toggle="popover" data-placement="right"
-               data-content="Address: <br />630 Dartmouth Pl, Evanston, IL 60208<br/><br/> Provide First Aid Service">
-                <img class="icon" src="resources/image/first-aid-icon.png" alt="Currents Album Cover"/>
-            </a>
-        </div>
-
-        <div id="icon_first_aid2">
-            <a href="#" title="First Aid" data-html="true" data-toggle="popover" data-placement="right"
-               data-content="Address: <br />630 Dartmouth Pl, Evanston, IL 60208<br/><br/> Provide First Aid Service">
-                <img class="icon" src="resources/image/first-aid-icon.png" alt="Currents Album Cover"/>
-            </a>
-        </div>
-
-        <div id="icon_police">
-            <a href="#" title="Police Department" data-html="true" data-toggle="popover" data-placement="right"
-               data-content="Address: <br />927 Noyes St, Evanston, IL 60201 <br/><br/>Temporary Police Office">
-                <img class="icon" src="resources/image/icon-police.png" alt="Currents Album Cover"/>
-            </a>
-        </div>
-
-        <div id="icon_food1">
-            <a href="#" title="Food" data-html="true" data-toggle="popover" data-placement="right"
-               data-content="Address: <br />2040 Sheridan Rd, Evanston, IL 60208 <br /><br/>Menu:<br />Pizza, Drink ">
-                <img class="icon" src="resources/image/food-icon.png" alt="Currents Album Cover" />
-            </a>
-        </div>
-
-        <div id="icon_food2">
-            <a href="#" title="Food" data-html="true" data-toggle="popover" data-placement="right"
-               data-content="Address: <br />1999 Campus Dr, Evanston, IL 60208<br /><br/>Menu:<br />Gyro, Taco, Drink ">
-                <img class="icon" src="resources/image/food-icon.png" alt="Currents Album Cover" />
-            </a>
-        </div>
-
-        <div id="icon_food3">
-            <a href="#" title="Food" data-html="true" data-toggle="popover" data-placement="right"
-               data-content="Address: <br />2100 Ridge Ave, Evanston, IL 60201<br /><br/>Menu:<br />Bread, Drink ">
-                <img class="icon" src="resources/image/food-icon.png" alt="Currents Album Cover" />
-            </a>
-        </div>
-
-        <div id="icon_food4">
-            <a href="#" title="Food" data-html="true" data-toggle="popover" data-placement="right"
-               data-content="Address: <br />1507 Emerson St, Evanston, IL 60201 <br /><br/>Menu:<br />Pasta, Burger, Drink ">
-                <img class="icon" src="resources/image/food-icon.png" alt="Currents Album Cover" />
-            </a>
-        </div>
-
-
-        <div id="icon_shop">
-            <a href="#" title="Store" data-html="true" data-toggle="popover" data-placement="right"
-               data-content="Address: <br />1900 Orrington Ave Evanston, IL 60201<br /><br/>First-aid supplies, Household products, Pharmacy ">
-                <img class="icon" src="resources/image/icon-shopping-cart.png" alt="Currents Album Cover" />
-            </a>
-        </div>
-
-
+    <div id="navb">
+        <nav class="navbar navbar-inverse">
+          <div class="container-fluid">
+            <div class="navbar-header">
+              <a class="navbar-brand" href="#"><span class="glyphicon glyphicon-screenshot"></span> ReliefMap</a>
+            </div>
+            <ul class="nav navbar-nav">
+              <li class="dropdown">
+                <a class="dropdown-toggle" data-toggle="dropdown" href="#">Filter
+                <span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                  <li><a href="#">Food &amp; Water</a></li>
+                  <li><a href="#">Medication</a></li>
+                  <li><a href="#">Tools &amp; Supply</a></li>
+                  <li><a href="#">Transportation</a></li>
+                </ul>
+              </li>
+              <li class="dropdown">
+                <a class="dropdown-toggle" data-toggle="dropdown" href="#">Weather
+                <span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                  <li><img src="resources/image/weather_icon.png" alt="Weather Icon" height="40px" width="40px"/>Cloudy</li>
+                  <li>Clouds: Scattered</li>
+                  <li>Temperature: 45</li>
+                  <li>Visibility: 10km+</li>
+                  <li>Wind: 3.1 m/s</li>
+                </ul>
+              </li>
+              <li><a href="#">Contact us</a></li>
+            </ul>
+            <div style="float: right;">
+                <ul>
+                    <button class="btn btn-danger navbar-btn">Refresh</button>
+                    <button class="btn btn-danger navbar-btn">GoTo</button>
+                </ul>
+            </div>
+          </div>
+        </nav>
     </div>
 
+    <div id="canvas">
+        <div id="icon1">
+            <img src="resources/image/first-aid-icon.png" alt="first-aid" height="40px" width="40px"/>
+        </div>
+        <div id="icon2">
+            <img src="resources/image/food-icon.png" alt="food" height="40px" width="40px"/>
+        </div>
+        <div id="icon3">
+            <img src="resources/image/shelter.png" alt="shelter" height="40px" width="40px"/>
+        </div>
     <div>
     <div id="map">
         <!--<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d11850.44642094857!2d-87.67473546604006!3d42.05150820670373!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sus!4v1509597472011" width="1920" height="1080" frameborder="0" style="border:0" allowfullscreen></iframe>-->
-        <img src="resources/image/map.png" style="width: 100%;height: 100%;">
+        <img src="resources/image/map.png" style="width: 1535px;height: 739px;">
     </div>
-    </div>
-
-</body></html>
-
-
-<!--
-Credit:
-<div>Icons made by <a href="http://www.freepik.com" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div>
->
+</body>
+</html>
+  

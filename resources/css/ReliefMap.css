@@ -1,75 +1,35 @@
 #map{
+    margin-top: 15px;
 	z-index: 10;
     position:absolute;
 }
-#icon_first_aid1{
+#icon1{
     z-index: 100;
     position:absolute;
+    width: 30px;
+    height: 30px;
     left: 700px;
     top: 100px;
 }
-
-#icon_first_aid2{
+#icon2{
     z-index: 100;
     position:absolute;
-    left: 350px;
-    top: 500px;
-}
-
-#icon_food1{
-    z-index: 100;
-    position:absolute;
+    width: 30px;
+    height: 30px;
     left: 750px;
     top: 290px;
 }
 
-#icon_food2{
+#icon3{
     z-index: 100;
     position:absolute;
-    left: 950px;
-    top: 400px;
+    width: 30px;
+    height: 30px;
+    left: 350px;
+    top: 290px;
 }
 
-#icon_food3{
-    z-index: 100;
-    position:absolute;
-    left: 300px;
-    top: 200px;
-}
-
-#icon_food4{
-    z-index: 100;
-    position:absolute;
-    left: 100px;
-    top: 450px;
-}
-
-#icon_shop{
-    z-index: 100;
-    position:absolute;
-    left: 640px;
-    top: 460px;
-}
-
-#icon_police{
-    z-index: 100;
-    position:absolute;
-    left: 450px;
-    top: 100px;
-}
-
-
-#current_location{
-    z-index: 100;
-    position:absolute;
-    left: 550px;
-    top: 295px;
-
-    text-align: center;
-    color:indianred;
-    font-weight: bold;
-}
-#canvas_icon{
+#canvas{  
     width:100%;  
     height:100%;
     margin: 0px auto; 
@@ -77,12 +37,8 @@
     z-index: 80;
 }
 
-.popover{
-    width:500px ;
-    height: 200px;
-}
-
-img.icon{
-    width: 40px;
-    height: 40px;
+#navb{
+    z-index: 80;
+    position:absolute;
+    width: 1535px;
 }
