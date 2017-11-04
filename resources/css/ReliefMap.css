@@ -2,27 +2,87 @@
 	z-index: 10;
     position:absolute;
 }
-#icon1{
+#icon_first_aid1{
     z-index: 100;
     position:absolute;
-    width: 30px;
-    height: 30px;
     left: 700px;
     top: 100px;
 }
-#icon2{
+
+#icon_first_aid2{
     z-index: 100;
     position:absolute;
-    width: 30px;
-    height: 30px;
+    left: 350px;
+    top: 500px;
+}
+
+#icon_food1{
+    z-index: 100;
+    position:absolute;
     left: 750px;
     top: 290px;
 }
 
-#canvas{  
+#icon_food2{
+    z-index: 100;
+    position:absolute;
+    left: 950px;
+    top: 400px;
+}
+
+#icon_food3{
+    z-index: 100;
+    position:absolute;
+    left: 300px;
+    top: 200px;
+}
+
+#icon_food4{
+    z-index: 100;
+    position:absolute;
+    left: 100px;
+    top: 450px;
+}
+
+#icon_shop{
+    z-index: 100;
+    position:absolute;
+    left: 640px;
+    top: 460px;
+}
+
+#icon_police{
+    z-index: 100;
+    position:absolute;
+    left: 450px;
+    top: 100px;
+}
+
+
+#current_location{
+    z-index: 100;
+    position:absolute;
+    left: 550px;
+    top: 295px;
+
+    text-align: center;
+    color:indianred;
+    font-weight: bold;
+}
+#canvas_icon{
     width:100%;  
     height:100%;
     margin: 0px auto; 
     opacity:1;
     z-index: 80;
-} 
+}
+
+.popover{
+    width:500px ;
+    height: 200px;
+}
+
+img.icon{
+    width: 40px;
+    height: 40px;
+}
