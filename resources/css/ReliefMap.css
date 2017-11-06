@@ -190,6 +190,7 @@ a[aria-expanded="false"]::before, a[aria-expanded="true"]::before {
 }
 a[aria-expanded="true"]::before {
     content: '\e260';
+    color: white;
 }
 
 
@@ -213,9 +214,8 @@ ul.CTAs a {
 
 a.download {
     background: #fff;
-    color: #7386D5;
+    color: #333;
 }
-
 
 
 
