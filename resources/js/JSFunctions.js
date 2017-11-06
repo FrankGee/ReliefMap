@@ -4,8 +4,19 @@ $(document).ready(function(){
 
 
  $(document).ready(function () {
-     $('.canvas_icon').on('click', function () {
-         $('#sidebar').toggleClass('active');
-         $('.canvas_icon').toggleClass('active');
+     $('.canvas_icon').click(function () {
+     	if ($('#sidebar').hasClass('active')){
+     		$('#sidebar').removeClass('active');
+        	$('.canvas_icon').addClass('active');
+     	} 
      });
+ });
+
+$(document).ready(function () {
+    $('#map').on('click', function(){
+		if ($('#sidebar').hasClass('active') == false) {
+     		$('#sidebar').addClass('active');
+         	$('.canvas_icon').removeClass('active');
+     	}
+     })
  });
