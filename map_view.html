@@ -84,12 +84,13 @@
 									<span class="caret"></span>
 								</a>
 									<ul class="dropdown-menu">
-										<li><a href="#">Food &amp; Water</a></li>
-										<li><a href="#">Medication</a></li>
-										<li><a href="#">Tools &amp; Supply</a></li>
-										<li><a href="#">Transportation</a></li>
+										<li id="food_icons"><a href="#">Food &amp; Water</a></li>
+										<li id="medication_icons"><a href="#">Medication</a></li>
+										<li id="supply_icons"><a href="#">Shop</a></li>
+										<li id="police_icons"><a href="#">Police</a></li>
+										<li id="all_icons"><a href="#">All</a></li>
 									</ul>
-								</li>
+							</li>
 							<li class="dropdown">
 								<a class="dropdown-toggle" data-toggle="dropdown" href="#">Weather
 									<span class="caret"></span>
@@ -102,7 +103,7 @@
 									<li>Wind: 3.1 m/s</li>
 								</ul>
 							</li>
-							<li><a href="#">Contact us</a></li>
+							<li data-toggle="modal" data-target="#contact_Modal"><a href="#">Contact us</a></li>
 						</ul>
 						<div style="float: right;">
 							<ul>
@@ -112,6 +113,30 @@
 						</div>
 					</div>
 				</nav>
+			</div>
+
+			<!-- Modal -->
+			<div class="modal fade" id="contact_Modal" role="dialog">
+				<div class="modal-dialog">
+
+					<!-- Modal content-->
+					<div class="modal-content">
+						<div class="modal-header">
+							<button type="button" class="close" data-dismiss="modal">&times;</button>
+							<h4 class="modal-title">Contact Us</h4>
+						</div>
+						<div class="modal-body">
+							<h4>Four Guys</h4>
+							<p>Email: fourguys@u.northwestern.edu</p>
+							<p>Phone: 847-123-456</p>
+							<p>Address:2120 Campus Dr, Evanston, IL 60208</p>
+						</div>
+						<div class="modal-footer">
+							<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+						</div>
+					</div>
+
+				</div>
 			</div>
 
 			
