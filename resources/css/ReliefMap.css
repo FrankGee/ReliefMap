@@ -1,8 +1,38 @@
-#map{
+#map {
     margin-top: 15px;
 	z-index: 10;
     display: flex;
+} 
+
+#maps > #base {
+    display: block;
 }
+#maps > #map_first_aid1 {
+    display: none;
+}
+#maps > #map_first_aid2 {
+    display: none;
+}
+#maps > #map_food1 {
+    display: none;
+}
+#maps > #map_food2 {
+    display: none;
+}
+#maps > #map_food3 {
+    display: none;
+}
+#maps > #map_food4 {
+    display: none;
+}
+#maps > #map_police {
+    display: none;
+}
+#maps > #map_shop{
+    display: none;
+}
+
+
 
 #icon_first_aid1{
     z-index: 100;
