@@ -81,6 +81,8 @@ $(document).ready(function () {
         hideSidebar();
     });
 });
+
+
 $(document).ready(function () {
      $("#food_icons").on("click", function() {
          $("#icon_first_aid1").toggle(false);
