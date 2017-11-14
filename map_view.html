@@ -40,7 +40,16 @@
 
 			<ul class="list-unstyled components">
 				<p>1930 Ridge Avenue, Evanston, IL 60201</p>
+<<<<<<< HEAD
 				<p>Basic first aid station.  Walk-ins Welcome.</p>
+=======
+				<li class="active">
+					<a href="#SiteTypeSubmenu" data-toggle="collapse" aria-expanded="false">First Aid</a>
+					<ul class="collapse list-unstyled" id="SiteTypeSubmenu">
+						<li><a href="#">Basic first aid station.  Walk-ins Welcome.</a></li>
+					</ul>
+				</li>
+>>>>>>> refs/remotes/origin/sidebar
 				<li>
 					<a href="#goodsSubmenu" data-toggle="collapse" aria-expanded="false">GOODS</a>
 					<ul class="collapse list-unstyled" id="goodsSubmenu">
@@ -66,7 +75,12 @@
 			</ul>
 
 			<ul class="list-unstyled CTAs">
+<<<<<<< HEAD
 				<li><a href="map_direct.html" class="download">Get Directions</a></li>
+=======
+				<li><a class="download" id="get_directions">Get Directions</a></li>
+                <li><a class="download" id="get_back">Back</a></li>
+>>>>>>> refs/remotes/origin/sidebar
 			</ul>
 		</nav>
 
@@ -85,12 +99,21 @@
 								</a>
 									<ul class="dropdown-menu">
 										<li id="food_icons"><a href="#">Food &amp; Water</a></li>
+<<<<<<< HEAD
 										<li id="medication_icons"><a href="#">Medication</a></li>
 										<li id="supply_icons"><a href="#">Shop</a></li>
 										<li id="police_icons"><a href="#">Police</a></li>
 										<li id="all_icons"><a href="#">All</a></li>
 									</ul>
 							</li>
+=======
+ 										<li id="medication_icons"><a href="#">Medication</a></li>
+ 										<li id="supply_icons"><a href="#">Shop</a></li>
+ 										<li id="police_icons"><a href="#">Police</a></li>
+ 										<li id="all_icons"><a href="#">All</a></li>
+									</ul>
+								</li>
+>>>>>>> refs/remotes/origin/sidebar
 							<li class="dropdown">
 								<a class="dropdown-toggle" data-toggle="dropdown" href="#">Weather
 									<span class="caret"></span>
@@ -103,17 +126,26 @@
 									<li>Wind: 3.1 m/s</li>
 								</ul>
 							</li>
+<<<<<<< HEAD
 							<li data-toggle="modal" data-target="#contact_Modal"><a href="#">Contact us</a></li>
 						</ul>
 						<div style="float: right;">
 							<ul>
 								<button class="btn btn-danger navbar-btn">Refresh</button>
 								<button class="btn btn-danger navbar-btn">GoTo</button>
+=======
+							<li><a href="#">Contact us</a></li>
+						</ul>
+						<div style="float: right;">
+							<ul>
+								<button class="btn btn-danger navbar-btn"><a href="map_view.html">Refresh</a></button>
+>>>>>>> refs/remotes/origin/sidebar
 							</ul>
 						</div>
 					</div>
 				</nav>
 			</div>
+<<<<<<< HEAD
 
 			<!-- Modal -->
 			<div class="modal fade" id="contact_Modal" role="dialog">
@@ -138,6 +170,32 @@
 
 				</div>
 			</div>
+=======
+			<!-- Modal -->
+ 			<div class="modal fade" id="contact_Modal" role="dialog">
+ 				<div class="modal-dialog">
+ 
+ 					<!-- Modal content-->
+ 					<div class="modal-content">
+ 						<div class="modal-header">
+ 							<button type="button" class="close" data-dismiss="modal">&times;</button>
+							<li data-toggle="modal" data-target="#contact_Modal">
+								<a href="#">Contact us</a>
+							</li>
+ 						</div>
+ 						<div class="modal-body">
+ 							<h4>Four Guys</h4>
+ 							<p>Email: fourguys@u.northwestern.edu</p>
+							<p>Phone: 847-123-456</p>
+ 							<p>Address:2120 Campus Dr, Evanston, IL 60208</p>
+ 						</div>
+ 						<div class="modal-footer">
+ 							<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+ 						</div>
+ 					</div>
+ 				</div>
+ 			</div>
+>>>>>>> refs/remotes/origin/sidebar
 
 			
 			<div id="current_location" class="canvas_icon">
@@ -203,9 +261,22 @@
 			</div>
 			
 
+<<<<<<< HEAD
 			<div id="map">
 				<!--<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d11850.44642094857!2d-87.67473546604006!3d42.05150820670373!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sus!4v1509597472011" width="1920" height="1080" frameborder="0" style="border:0" allowfullscreen></iframe>-->
 				<img src="resources/image/map.png" style="width: 1535px;height: 739px;">
+=======
+			<div id="maps">
+				<img src="resources/image/map.png" id="base" style="width: 1535px;height: 739px;">
+				<img src="resources/image/map_first_aid1.png" id="map_first_aid1" style="width: 1535px;height: 739px;">
+				<img src="resources/image/map_first_aid2.png" id="map_first_aid2" style="width: 1535px;height: 739px;">
+				<img src="resources/image/map_food1.png" id="map_food1" style="width: 1535px;height: 739px;">
+				<img src="resources/image/map_food2.png" id="map_food2" style="width: 1535px;height: 739px;">
+				<img src="resources/image/map_food3.png" id="map_food3" style="width: 1535px;height: 739px;">
+				<img src="resources/image/map_food4.png" id="map_food4" style="width: 1535px;height: 739px;">
+				<img src="resources/image/map_police.png" id="map_police" style="width: 1535px;height: 739px;">
+				<img src="resources/image/map_shop.png" id="map_shop" style="width: 1535px;height: 739px;">
+>>>>>>> refs/remotes/origin/sidebar
 			</div>
 		</div>
 	</div>
