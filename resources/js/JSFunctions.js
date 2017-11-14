@@ -77,6 +77,11 @@ $(document).ready(function () {
 });
 
 $(document).ready(function () {
+    $('#get_back').click(function () {
+        hideSidebar();
+    });
+});
+$(document).ready(function () {
      $("#food_icons").on("click", function() {
          $("#icon_first_aid1").toggle(false);
          $("#icon_first_aid2").toggle(false);
