@@ -10,6 +10,7 @@ $(document).ready(function () {
      		$('#sidebar').removeClass('active');
         	$('.canvas_icon').addClass('active');
      	}
+
         destination = $(this).attr('id');
         switch(destination) {
             case "icon_first_aid1":
@@ -67,14 +68,14 @@ $(document).ready(function() {
 $(document).ready(function () {
     $('#get_directions').click(function () {
         var maps = document.getElementById("maps").children;
-        for(var i = 0; i < maps.length; i) {
+        for(var i = 0; i < maps.length; i++) {
             maps[i].style.display = "none";
         }
-        console.log(destination);
         $(destination).css("display", "block");
         hideSidebar();
     });
 });
+
 
 $(document).ready(function () {
     $('#get_back').click(function () {
