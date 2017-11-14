@@ -21,6 +21,7 @@ $(document).ready(function () {
      	}
      })
 <<<<<<< HEAD
+<<<<<<< HEAD
  });
 
 $(document).ready(function () {
@@ -235,6 +236,9 @@ $(document).ready(function () {
  
  });
 >>>>>>> refs/remotes/origin/sidebar
+=======
+ });
+>>>>>>> parent of 5f1d516... Update filter
 =======
  });
 >>>>>>> parent of 5f1d516... Update filter
