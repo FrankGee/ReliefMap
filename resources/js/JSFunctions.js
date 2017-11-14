@@ -3,66 +3,110 @@ $(document).ready(function(){
 });
 
 var destination = "#base";
+var sidebarOn = false;
+var selectedDest = '';
 
 $(document).ready(function () {
     $('.canvas_icon').click(function () {
      	if ($('#sidebar').hasClass('active')){
      		$('#sidebar').removeClass('active');
         	$('.canvas_icon').addClass('active');
-     	}
-
-        destination = $(this).attr('id');
-        switch(destination) {
-            case "icon_first_aid1":
-                destination = "#map_first_aid1";
-                break;
-            case "icon_first_aid2":
-                destination = "#map_first_aid2";
-                break;
-            case "icon_food1":
-                destination = "#map_food1";
-                break;
-            case "icon_food2":
-                destination = "#map_food2";
-                break;
-            case "icon_food3":
-                destination = "#map_food3";
-                break;
-            case "icon_food4":
-                destination = "#map_food4";
-                break;
-            case "icon_shop":
-                destination = "#map_shop";
-                break;
-            case "icon_police":
-                destination = "#map_police";
-                break;
-            default:
-                destination = "#base";
-                break;
         }
+
+        if (!sidebarOn) {
+
+            destination = $(this).attr('id');
+            switch (destination) {
+                case "icon_first_aid1":
+                    destination = "#map_first_aid1";
+                    selectedDest = '#icon_first_aid1 .icon';
+                    $(selectedDest).css({'border': '5px outset coral'});
+                    break;
+                case "icon_first_aid2":
+                    destination = "#map_first_aid2";
+                    selectedDest = '#icon_first_aid2 .icon';
+                    $(selectedDest).css({'border': '5px outset coral'});
+                    break;
+                case "icon_food1":
+                    destination = "#map_food1";
+                    selectedDest = '#icon_food1 .icon';
+                    $(selectedDest).css({'border': '5px outset coral'});
+                    break;
+                case "icon_food2":
+                    destination = "#map_food2";
+                    selectedDest = '#icon_food2 .icon';
+                    $(selectedDest).css({'border': '5px outset coral'});
+                    break;
+                case "icon_food3":
+                    destination = "#map_food3";
+                    selectedDest = '#icon_food3 .icon';
+                    $(selectedDest).css({'border': '5px outset coral'});
+                    break;
+                case "icon_food4":
+                    destination = "#map_food4";
+                    selectedDest = '#icon_food4 .icon';
+                    $(selectedDest).css({'border': '5px outset coral'});
+                    break;
+                case "icon_shop":
+                    destination = "#map_shop";
+                    selectedDest = '#icon_shop .icon';
+                    $(selectedDest).css({'border': '5px outset coral'});
+                    break;
+                case "icon_police":
+                    destination = "#map_police";
+                    selectedDest = '#icon_police .icon';
+                    $(selectedDest).css({'border': '5px outset coral'});
+                    break;
+                default:
+                    destination = "#base";
+                    selectedDest = '';
+                    $(selectedDest).css({'border': 'none'});
+                    break;
+            }
+        }
+        sidebarOn = true;
+        disablePopOver(true);
+
     });
 });
 
-function hideSidebar(){
-    $(document).ready(function() {
-        if ($('#sidebar').hasClass('active') == false) {
-            $('#sidebar').addClass('active');
-            $('.canvas_icon').removeClass('active');
-        }
-     })
-    destination = null;
+function disablePopOver(choice){
+
+    if (choice) {
+        $('#icon_first_aid1 a').popover('disable');
+        $('#icon_first_aid2 a').popover('disable');
+        $('#icon_food1 a').popover('disable');
+        $('#icon_food2 a').popover('disable');
+        $('#icon_food3 a').popover('disable');
+        $('#icon_food4 a').popover('disable');
+        $('#icon_shop a').popover('disable');
+        $('#icon_police a').popover('disable');
+    }else{
+        $(selectedDest).css({'border': 'none'});
+        selectedDest = '';
+
+        $('#icon_first_aid1 a').popover("enable");
+        $('#icon_first_aid2 a').popover('enable');
+        $('#icon_food1 a').popover('enable');
+        $('#icon_food2 a').popover('enable');
+        $('#icon_food3 a').popover('enable');
+        $('#icon_food4 a').popover('enable');
+        $('#icon_shop a').popover('enable');
+        $('#icon_police a').popover('enable');
+    }
 }
 
-$(document).ready(function() {
-    $('#maps').on('click', function (){
+function hideSidebar(){
+    $(document).ready(function() {
+        sidebarOn = false;
+        disablePopOver(false)
         if ($('#sidebar').hasClass('active') == false) {
             $('#sidebar').addClass('active');
             $('.canvas_icon').removeClass('active');
         }
-     })
+     });
     destination = null;
- });
+}
 
 
 $(document).ready(function () {
@@ -72,7 +116,6 @@ $(document).ready(function () {
             maps[i].style.display = "none";
         }
         $(destination).css("display", "block");
-        hideSidebar();
     });
 });
 
@@ -80,12 +123,17 @@ $(document).ready(function () {
 $(document).ready(function () {
     $('#get_back').click(function () {
         hideSidebar();
+        $("#base").toggle(true);
     });
 });
 
 
 $(document).ready(function () {
+
      $("#food_icons").on("click", function() {
+         $("#base").toggle(true);
+         hideSidebar();
+
          $("#icon_first_aid1").toggle(false);
          $("#icon_first_aid2").toggle(false);
          $("#icon_shop").toggle(false);
@@ -98,6 +146,9 @@ $(document).ready(function () {
      });
  
      $("#medication_icons").on("click", function() {
+         $("#base").toggle(true);
+         hideSidebar();
+
          $("#icon_shop").toggle(false);
          $("#icon_police").toggle(false);
          $("#icon_food1").toggle(false);
@@ -110,6 +161,9 @@ $(document).ready(function () {
      });
  
      $("#supply_icons").on("click", function() {
+         $("#base").toggle(true);
+         hideSidebar();
+
          $("#icon_first_aid1").toggle(false);
          $("#icon_first_aid2").toggle(false);
          $("#icon_police").toggle(false);
@@ -124,6 +178,9 @@ $(document).ready(function () {
      });
  
      $("#police_icons").on("click", function() {
+         $("#base").toggle(true);
+         hideSidebar();
+
          $("#icon_first_aid1").toggle(false);
          $("#icon_first_aid2").toggle(false);
          $("#icon_food1").toggle(false);
@@ -138,6 +195,9 @@ $(document).ready(function () {
  
  
      $("#all_icons").on("click", function() {
+         $("#base").toggle(true);
+         hideSidebar();
+
          $("#icon_first_aid1").toggle(true);
          $("#icon_first_aid2").toggle(true);
          $("#icon_food1").toggle(true);
