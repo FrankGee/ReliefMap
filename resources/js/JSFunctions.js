@@ -2,95 +2,6 @@ $(document).ready(function(){
     $('[data-toggle="popover"]').popover({ trigger: "hover" });
 });
 
-<<<<<<< HEAD
-
- $(document).ready(function () {
-     $('.canvas_icon').click(function () {
-     	if ($('#sidebar').hasClass('active')){
-     		$('#sidebar').removeClass('active');
-        	$('.canvas_icon').addClass('active');
-     	} 
-     });
- });
-
-$(document).ready(function () {
-    $('#map').on('click', function(){
-		if ($('#sidebar').hasClass('active') == false) {
-     		$('#sidebar').addClass('active');
-         	$('.canvas_icon').removeClass('active');
-     	}
-     })
-<<<<<<< HEAD
-<<<<<<< HEAD
- });
-
-$(document).ready(function () {
-    $("#food_icons").on("click", function() {
-        $("#icon_first_aid1").toggle(false);
-        $("#icon_first_aid2").toggle(false);
-        $("#icon_shop").toggle(false);
-        $("#icon_police").toggle(false);
-
-        $("#icon_food1").toggle(true);
-        $("#icon_food2").toggle(true);
-        $("#icon_food3").toggle(true);
-        $("#icon_food4").toggle(true);
-    });
-
-    $("#medication_icons").on("click", function() {
-        $("#icon_shop").toggle(false);
-        $("#icon_police").toggle(false);
-        $("#icon_food1").toggle(false);
-        $("#icon_food2").toggle(false);
-        $("#icon_food3").toggle(false);
-        $("#icon_food4").toggle(false);
-
-        $("#icon_first_aid1").toggle(true);
-        $("#icon_first_aid2").toggle(true);
-    });
-
-    $("#supply_icons").on("click", function() {
-        $("#icon_first_aid1").toggle(false);
-        $("#icon_first_aid2").toggle(false);
-        $("#icon_police").toggle(false);
-        $("#icon_food1").toggle(false);
-        $("#icon_food2").toggle(false);
-        $("#icon_food3").toggle(false);
-        $("#icon_food4").toggle(false);
-
-        $("#icon_shop").toggle(true);
-
-
-    });
-
-    $("#police_icons").on("click", function() {
-        $("#icon_first_aid1").toggle(false);
-        $("#icon_first_aid2").toggle(false);
-        $("#icon_food1").toggle(false);
-        $("#icon_food2").toggle(false);
-        $("#icon_food3").toggle(false);
-        $("#icon_food4").toggle(false);
-        $("#icon_shop").toggle(false);
-
-        $("#icon_police").toggle(true);
-
-    });
-
-
-    $("#all_icons").on("click", function() {
-        $("#icon_first_aid1").toggle(true);
-        $("#icon_first_aid2").toggle(true);
-        $("#icon_food1").toggle(true);
-        $("#icon_food2").toggle(true);
-        $("#icon_food3").toggle(true);
-        $("#icon_food4").toggle(true);
-        $("#icon_shop").toggle(true);
-        $("#icon_police").toggle(true);
-    });
-
-});
-
-=======
 var destination = "#base";
 
 $(document).ready(function () {
@@ -235,10 +146,3 @@ $(document).ready(function () {
      });
  
  });
->>>>>>> refs/remotes/origin/sidebar
-=======
- });
->>>>>>> parent of 5f1d516... Update filter
-=======
- });
->>>>>>> parent of 5f1d516... Update filter

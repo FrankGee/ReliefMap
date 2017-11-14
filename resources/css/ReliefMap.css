@@ -2,8 +2,6 @@
     margin-top: 15px;
 	z-index: 10;
     display: flex;
-<<<<<<< HEAD
-=======
 } 
 
 #maps > #base {
@@ -29,7 +27,6 @@
 }
 #maps > #map_police {
     display: none;
->>>>>>> refs/remotes/origin/sidebar
 }
 #maps > #map_shop{
     display: none;
@@ -223,10 +220,6 @@ a[aria-expanded="false"]::before, a[aria-expanded="true"]::before {
 }
 a[aria-expanded="true"]::before {
     content: '\e260';
-<<<<<<< HEAD
-    color: white;
-=======
->>>>>>> refs/remotes/origin/sidebar
 }
 
 
@@ -250,19 +243,12 @@ ul.CTAs a {
 
 a.download {
     background: #fff;
-<<<<<<< HEAD
-    color: #333;
-=======
     color: #7386D5;
->>>>>>> refs/remotes/origin/sidebar
 }
 
 
 
-<<<<<<< HEAD
-=======
 
->>>>>>> refs/remotes/origin/sidebar
 /* ---------------------------------------------------
     CONTENT STYLE
 ----------------------------------------------------- */
