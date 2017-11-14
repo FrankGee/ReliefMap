@@ -20,6 +20,7 @@ $(document).ready(function () {
          	$('.canvas_icon').removeClass('active');
      	}
      })
+<<<<<<< HEAD
  });
 
 $(document).ready(function () {
@@ -234,3 +235,6 @@ $(document).ready(function () {
  
  });
 >>>>>>> refs/remotes/origin/sidebar
+=======
+ });
+>>>>>>> parent of 5f1d516... Update filter
