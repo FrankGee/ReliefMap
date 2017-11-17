@@ -105,6 +105,8 @@ function hideSidebar(){
             $('.canvas_icon').removeClass('active');
         }
      });
+    $(destination).css("display", "none");
+    $("#base").css("display", "block");
     destination = null;
 }
 
@@ -122,11 +124,7 @@ $(document).ready(function () {
 
 $(document).ready(function () {
     $('#get_back').click(function () {
-        $(destination).css("display", "none");
         hideSidebar();
-        $("#base").css("display", "block");
-
-
     });
 });
 
