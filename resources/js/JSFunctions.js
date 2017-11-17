@@ -122,8 +122,11 @@ $(document).ready(function () {
 
 $(document).ready(function () {
     $('#get_back').click(function () {
+        $(destination).css("display", "none");
         hideSidebar();
-        $("#base").toggle(true);
+        $("#base").css("display", "block");
+
+
     });
 });
 
