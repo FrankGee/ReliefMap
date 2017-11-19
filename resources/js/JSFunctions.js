@@ -3,66 +3,66 @@ $(document).ready(function(){
 });
 
 var destination = "#base";
+var currMap = "#base"
 var sidebarOn = false;
 var selectedDest = '';
+var inTransit = false;
 
 $(document).ready(function () {
     $('.canvas_icon').click(function () {
      	if ($('#sidebar').hasClass('active')){
      		$('#sidebar').removeClass('active');
-        	$('.canvas_icon').addClass('active');
+        	$('.canvas_icon').addClass('active');   
         }
 
-        if (!sidebarOn) {
-
-            destination = $(this).attr('id');
-            switch (destination) {
-                case "icon_first_aid1":
-                    destination = "#map_first_aid1";
-                    selectedDest = '#icon_first_aid1 .icon';
-                    $(selectedDest).css({'border': '5px outset coral'});
-                    break;
-                case "icon_first_aid2":
-                    destination = "#map_first_aid2";
-                    selectedDest = '#icon_first_aid2 .icon';
-                    $(selectedDest).css({'border': '5px outset coral'});
-                    break;
-                case "icon_food1":
-                    destination = "#map_food1";
-                    selectedDest = '#icon_food1 .icon';
-                    $(selectedDest).css({'border': '5px outset coral'});
-                    break;
-                case "icon_food2":
-                    destination = "#map_food2";
-                    selectedDest = '#icon_food2 .icon';
-                    $(selectedDest).css({'border': '5px outset coral'});
-                    break;
-                case "icon_food3":
-                    destination = "#map_food3";
-                    selectedDest = '#icon_food3 .icon';
-                    $(selectedDest).css({'border': '5px outset coral'});
-                    break;
-                case "icon_food4":
-                    destination = "#map_food4";
-                    selectedDest = '#icon_food4 .icon';
-                    $(selectedDest).css({'border': '5px outset coral'});
-                    break;
-                case "icon_shop":
-                    destination = "#map_shop";
-                    selectedDest = '#icon_shop .icon';
-                    $(selectedDest).css({'border': '5px outset coral'});
-                    break;
-                case "icon_police":
-                    destination = "#map_police";
-                    selectedDest = '#icon_police .icon';
-                    $(selectedDest).css({'border': '5px outset coral'});
-                    break;
-                default:
-                    destination = "#base";
-                    selectedDest = '';
-                    $(selectedDest).css({'border': 'none'});
-                    break;
-            }
+        destination = $(this).attr('id');
+        switch (destination) {
+            case "icon_first_aid1":
+                destination = "#map_first_aid1";
+                selectedDest = '#icon_first_aid1 .icon';
+                break;
+            case "icon_first_aid2":
+                destination = "#map_first_aid2";
+                selectedDest = '#icon_first_aid2 .icon';
+                break;
+            case "icon_food1":
+                destination = "#map_food1";
+                selectedDest = '#icon_food1 .icon';
+                break;
+            case "icon_food2":
+                destination = "#map_food2";
+                selectedDest = '#icon_food2 .icon';
+                break;
+            case "icon_food3":
+                destination = "#map_food3";
+                selectedDest = '#icon_food3 .icon';
+                break;
+            case "icon_food4":
+                destination = "#map_food4";
+                selectedDest = '#icon_food4 .icon';
+                break;
+            case "icon_shop":
+                destination = "#map_shop";
+                selectedDest = '#icon_shop .icon';
+                break;
+            case "icon_police":
+                destination = "#map_police";
+                selectedDest = '#icon_police .icon';
+                break;
+            default:
+                destination = "#base";
+                selectedDest = '';
+                $(selectedDest).css({'border': 'none'});
+                break;
+        }
+        if ((destination === currMap) && inTransit) {
+            $("#get_directions").css("display", "none");
+            $("#get_directions_m").css("display", "none");
+            $("#cancel_navigation").css("display", "block");
+        }
+        if ((destination !== currMap) && inTransit) {
+            $("#get_directions_m").css("display", "block");
+            $("#cancel_navigation").css("display", "block");
         }
         sidebarOn = true;
         disablePopOver(true);
@@ -71,7 +71,6 @@ $(document).ready(function () {
 });
 
 function disablePopOver(choice){
-
     if (choice) {
         $('#icon_first_aid1 a').popover('disable');
         $('#icon_first_aid2 a').popover('disable');
@@ -110,7 +109,7 @@ function hideSidebar(){
     destination = null;
 }
 
-
+//Navigate
 $(document).ready(function () {
     $('#get_directions').click(function () {
         var maps = document.getElementById("maps").children;
@@ -118,14 +117,24 @@ $(document).ready(function () {
             maps[i].style.display = "none";
         }
         $(destination).css("display", "block");
+        currMap = destination;
+        $("#get_directions").css("display", "none");
+        $("#get_directions_m").css("display", "none");
+        $("#cancel_navigation").css("display", "block");
+        inTransit = true;
     });
 });
 
-
+//Cancel Navigation
 $(document).ready(function () {
-    $('#get_back').click(function () {
+    $('#cancel_navigation').click(function () {
         hideSidebar();
+        $("#get_directions").css("display", "block");
+        $("#get_directions_m").css("display", "none");
+        $("#cancel_navigation").css("display", "none");
+        inTransit = false;
     });
+    
 });
 
 

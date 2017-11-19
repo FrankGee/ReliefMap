@@ -1,5 +1,5 @@
 #maps {
-    margin-top: -59px;
+    margin-top: -99px;
 	z-index: 10;
     display: relative;
 } 
@@ -252,9 +252,17 @@ a.download {
     color: #7386D5;
 }
 
+#sidebar ul li a#cancel_navigation {
+    display: none;
+}
 
+#sidebar ul li a#get_directions_m {
+    display: none;
+}
 
-
+#sidebar ul li a#get_directions {
+    display: block;
+}
 /* ---------------------------------------------------
     CONTENT STYLE
 ----------------------------------------------------- */

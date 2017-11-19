@@ -72,7 +72,8 @@
 
 			<ul class="list-unstyled CTAs">
 				<li><a class="download" id="get_directions">Get Directions</a></li>
-                <li><a class="download" id="get_back">Back</a></li>
+				<li><a class="download" data-toggle="modal" data-target="#new_destination" id="get_directions_m">Get Directions</a></li>
+                <li><a class="download" id="cancel_navigation">Cancel Navigation</a></li>
 			</ul>
 		</nav>
 
@@ -143,6 +144,25 @@
 				</div>
 			</div>
 
+			<div class="modal fade" id="new_destination" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+			  <div class="modal-dialog" role="document">
+			    <div class="modal-content">
+			      <div class="modal-header">
+			        <h5 class="modal-title" id="exampleModalLabel">Choose a new destination?</h5>
+			        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+			          <span aria-hidden="true">&times;</span>
+			        </button>
+			      </div>
+			      <div class="modal-body">
+			        You're currently in the middle of a navigation.  Do you want to choose this as your new destination?
+			      </div>
+			      <div class="modal-footer">
+			        <button type="button" class="btn btn-secondary" data-dismiss="modal">No</button>
+			        <button type="button" class="btn btn-primary">Yes</button>
+			      </div>
+			    </div>
+			  </div>
+			</div>
 			
 			<div id="current_location" class="canvas_icon">
 				<img class="icon" src="resources/image/icon-current_location.png" alt="Currents Album Cover"/>
