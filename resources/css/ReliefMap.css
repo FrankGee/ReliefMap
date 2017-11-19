@@ -1,7 +1,7 @@
 #maps {
-    margin-top: 15px;
+    margin-top: -59px;
 	z-index: 10;
-    display: flex;
+    display: relative;
 } 
 
 #maps > #base {
@@ -144,10 +144,16 @@ img.icon{
 
 #navb{
     z-index: 80;
-    position:absolute;
-    width: 1535px;
+    margin: 0;
+    padding: 0;
 }
 
+#filters{
+    margin-top: 25px;
+    margin-left: 25px;
+    display: absolute;
+    z-index: 81;
+}
 /*
     DEMO STYLE
 */

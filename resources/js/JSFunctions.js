@@ -132,6 +132,7 @@ $(document).ready(function () {
 $(document).ready(function () {
 
      $("#food_icons").on("click", function() {
+        console.log("food filter pressed");
          $("#base").toggle(true);
          hideSidebar();
 

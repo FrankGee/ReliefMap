@@ -86,18 +86,6 @@
 						</div>
 						<ul class="nav navbar-nav">
 							<li class="dropdown">
-								<a class="dropdown-toggle" data-toggle="dropdown" href="#">Filter
-									<span class="caret"></span>
-								</a>
-									<ul class="dropdown-menu">
-										<li id="food_icons"><a href="#">Food &amp; Water</a></li>
- 										<li id="medication_icons"><a href="#">Medication</a></li>
- 										<li id="supply_icons"><a href="#">Shop</a></li>
- 										<li id="police_icons"><a href="#">Police</a></li>
- 										<li id="all_icons"><a href="#">All</a></li>
-									</ul>
-								</li>
-							<li class="dropdown">
 								<a class="dropdown-toggle" data-toggle="dropdown" href="#">Weather
 									<span class="caret"></span>
 								</a>
@@ -114,6 +102,26 @@
 					</div>
 				</nav>
 			</div>
+			<div id="filters">
+				<div class="btn-group" data-toggle="buttons">
+					<label id="all_icons" class="btn btn-primary active">
+						<input type="radio" checked autocomplete="off"> All
+					</label>
+					<label id="food_icons" class="btn btn-primary">
+						<input type="radio" checked autocomplete="off"> Food and Water
+					</label>
+					<label id="medication_icons" class="btn btn-primary">
+						<input type="radio" autocomplete="off"> Medication
+					</label>
+					<label id="supply_icons" class="btn btn-primary">
+						<input type="radio" autocomplete="off"> Shops
+					</label>
+					<label id="police_icons" class="btn btn-primary">
+						<input id="police_icons" type="radio" autocomplete="off"> Police
+					</label>
+				</div>
+			</div>
+
 			<!-- Modal -->
 			<div class="modal fade" id="contact_Modal" role="dialog">
 				<div class="modal-dialog">
