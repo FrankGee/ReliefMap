@@ -137,6 +137,15 @@ $(document).ready(function () {
     
 });
 
+$(document).ready(function () {
+    $('#maps').click(function () {
+        if (!inTransit){
+            hideSidebar();
+        }
+    });
+    
+});
+
 
 $(document).ready(function () {
 

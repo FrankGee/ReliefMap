@@ -46,7 +46,7 @@
 
 #icon_first_aid2{
     z-index: 100;
-    position:absolute;
+    position: absolute;
     left: 370px;
     top: 470px;
 }
@@ -56,7 +56,7 @@
 
 #icon_food1{
     z-index: 100;
-    position:absolute;
+    position: absolute;
     left: 850px;
     top: 350px;
 }
@@ -96,7 +96,7 @@
 
 #icon_shop{
     z-index: 100;
-    position:absolute;
+    position: absolute;
     left: 730px;
     top: 530px;
 }
@@ -121,7 +121,7 @@
     top: 295px;
 
     text-align: center;
-    color:indianred;
+    color: indianred;
     font-weight: bold;
 }
 #current_location.active{
@@ -171,8 +171,6 @@ img.icon{
 #sidebar {
     min-width: 250px;
     max-width: 250px;
-    background: #444;
-    color: #9D9D9D;
     transition: all 0.3s;
 }
 
@@ -182,7 +180,6 @@ img.icon{
 
 #sidebar .sidebar-header {
     padding: 20px;
-    background: #333;
 }
 
 #sidebar ul.components {
@@ -191,7 +188,6 @@ img.icon{
 }
 
 #sidebar ul p {
-    color: #fff;
     padding: 10px;
 }
 
@@ -199,14 +195,15 @@ img.icon{
     padding: 10px;
     font-size: 1.1em;
     display: block;
+    text-decoration: none;
+    color: navy;
 }
 #sidebar ul li a:hover {
-    color: #FFF;
-    background: #9D9D9D;
+    text-decoration: none;
+    color: navy;
 }
 
 #sidebar ul li.active > a, a[aria-expanded="true"] {
-    color: #9D9D9D;
 }
 
 
@@ -232,7 +229,6 @@ a[aria-expanded="true"]::before {
 ul ul a {
     font-size: 0.9em !important;
     padding-left: 30px !important;
-    background: #9D9D9D;
 }
 
 ul.CTAs {
@@ -245,11 +241,11 @@ ul.CTAs a {
     display: block;
     border-radius: 5px;
     margin-bottom: 5px;
+    border: 1px solid navy;
+    color: navy;
 }
 
 a.download {
-    background: #fff;
-    color: #7386D5;
 }
 
 #sidebar ul li a#cancel_navigation {
