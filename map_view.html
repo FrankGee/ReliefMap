@@ -79,30 +79,30 @@
 
 		<!-- Page Content Holder -->
 		<div id="content">
-			<div id="navb">
-				<nav class="navbar navbar-inverse bg-primary">
-					<div class="container-fluid">
-						<div class="navbar-header">
-							<a class="navbar-brand" href="#"><span class="glyphicon glyphicon-screenshot"></span> ReliefMap</a>
-						</div>
-						<ul class="nav navbar-nav">
-							<li class="dropdown">
-								<a class="dropdown-toggle" data-toggle="dropdown" href="#">Weather
-									<span class="caret"></span>
-								</a>
-								<ul class="dropdown-menu">
-									<li><img src="resources/image/weather_icon.png" alt="Weather Icon" height="40px" width="40px"/>Cloudy</li>
-									<li>Clouds: Scattered</li>
-									<li>Temperature: 45</li>
-									<li>Visibility: 10km+</li>
-									<li>Wind: 3.1 m/s</li>
-								</ul>
-							</li>
-							<li data-toggle="modal" data-target="#contact_Modal"><a href="#">Contact us</a></li>
-						</ul>
+			<nav class="navbar navbar-default">
+				<div class="container-fluid">
+					<div class="navbar-header">
+					<a class="navbar-brand" href="#"><span class="glyphicon glyphicon-screenshot"></span> ReliefMap</a>
 					</div>
-				</nav>
-			</div>
+
+					<ul class="nav navbar-nav">
+						<li class="dropdown">
+							<a href="#"  data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Weather </a>
+							<ul class="dropdown-menu">
+								<li><img src="resources/image/weather_icon.png" alt="Weather Icon" height="40px" width="40px"/>Cloudy</li>
+								<li>Clouds: Scattered</li>
+								<li>Temperature: 45</li>
+								<li>Visibility: 10km+</li>
+								<li>Wind: 3.1 m/s</li>
+							</ul>
+						</li>
+						<li data-toggle="modal" data-target="#contact_Modal"><a href="#">Contact us</a></li>			
+					</ul>
+				</div>
+			</nav>
+			
+
+			<!-- Filters Radio Buttons -->
 			<div id="filters">
 				<div class="btn-group" data-toggle="buttons">
 					<label id="all_icons" class="btn btn-primary active">
