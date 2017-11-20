@@ -125,6 +125,21 @@ $(document).ready(function () {
     });
 });
 
+$(document).ready(function () {
+    $('#renavigate').click(function () {
+        var maps = document.getElementById("maps").children;
+        for(var i = 0; i < maps.length; i++) {
+            maps[i].style.display = "none";
+        }
+        $(destination).css("display", "block");
+        currMap = destination;
+        $("#get_directions").css("display", "none");
+        $("#get_directions_m").css("display", "none");
+        $("#cancel_navigation").css("display", "block");
+        inTransit = true;
+    });
+});
+
 //Cancel Navigation
 $(document).ready(function () {
     $('#cancel_navigation').click(function () {
