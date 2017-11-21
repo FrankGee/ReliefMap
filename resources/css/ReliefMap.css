@@ -34,7 +34,19 @@
     display: none;
 }
 
-
+#scaler{
+    z-index: 100;
+    position:absolute;
+    left: 550px;
+    top: 450px;
+    text-align: center;
+    font-weight: bold;
+    transition: all 0.3s;
+}
+#scaler.active{
+    left: 800px;
+    transition: all 0.3s;
+}
 
 #icon_first_aid1{
     z-index: 100;
