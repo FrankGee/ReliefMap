@@ -18,6 +18,12 @@
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 	<script src="resources/js/JSFunctions.js"></script>
 
+    <style>
+        #Emergency_Contact_Button{
+            margin-top:8px;
+        }
+    </style>
+    
 </head>
 <body>
 
@@ -134,6 +140,56 @@
 			</div>
 		</div>
 	</div>
+    
+    
+    <!-- Emergency Contact Modal -->
+    <div class="modal fade" id="Emergency_Contact_Modal" role="dialog">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal">&times;</button>
+						<h4 class="modal-title">Emergency Contact</h4>
+					</div>
+					<div class="modal-body">
+						<form id="contact-form" role="form">
+							<div class="messages"></div>
+							<div class="controls">
+								<div class="row">
+									<div class="col-md-6">
+										<div class="form-group">
+											<label for="form_name">Your Name *</label>
+											<input id="form_name" type="text" name="name" class="form-control" placeholder="Please enter your firstname *" required="required" data-error="Firstname is required.">
+											<div class="help-block with-errors"></div>
+										</div>
+									</div>
+									<div class="col-md-6">
+										<div class="form-group">
+											<label for="form_lastname">Number *</label>
+											<input id="form_lastname" type="text" name="surname" class="form-control" placeholder="Please enter your lastname *" required="required" data-error="Lastname is required.">
+											<div class="help-block with-errors"></div>
+										</div>
+									</div>
+								</div>
+								
+								<div class="row">
+									<div class="col-md-12">
+										<div class="form-group">
+											<label for="form_message">Message *</label>
+											<textarea id="form_message" name="message" class="form-control" placeholder="Message to send" rows="4" required="required" data-error="Please,leave us a message."></textarea>
+											<div class="help-block with-errors"></div>
+										</div>
+									</div>
+									<div class="col-md-12">
+										<input type="submit" class="btn btn-danger btn-send" value="Send message">
+									</div>
+								</div>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+    
 
 	<!-- Page Content Holder -->
 	<div id="content">
@@ -155,6 +211,7 @@
 						</ul>
 					</li>
 					<li data-toggle="modal" data-target="#contact_Modal"><a href="#">Contact us</a></li>
+                    <li><div id="Emergency_Contact_Button"><input type="submit" class="btn btn-danger btn-send" value="Emergency Contact" data-toggle="modal" data-target="#Emergency_Contact_Modal"></div></li>
 				</ul>
 			</div>
 		</nav>
