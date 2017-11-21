@@ -133,7 +133,21 @@ $(document).ready(function () {
                 $(selectedDest).css({'border': '5px outset coral'});
 
                 break;
-
+            
+            case "shelter_1":
+                destination = "#map_police";
+                selectedDest = '#icon_police .icon';
+                document.getElementById("Target-title").innerHTML = "Shelter";
+                document.getElementById("target-addr").innerHTML = "2225 Ridge Ave, Evanston, IL 60201";
+                document.getElementById("Target-Category-details").innerHTML = "Shelters for all citizens";
+                document.getElementById("Target-Good-details-1").innerHTML = "";
+                document.getElementById("Target-Good-details-2").innerHTML = "";
+                document.getElementById("Target-Service-details-1").innerHTML = "";
+                document.getElementById("Target-Service-details-2").innerHTML = "";
+                document.getElementById("Contact-Name").innerHTML = "Yani Xie";
+                document.getElementById("Contact-Phone").innerHTML = "321-789-4506";
+                break;
+            
             default:
                 destination = "#base";
                 selectedDest = '';

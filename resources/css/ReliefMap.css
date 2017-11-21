@@ -134,6 +134,31 @@
     transition: all 0.3s;
 }
 
+#circle{
+    z-index: 100;
+    position:absolute;
+    left: 405px;
+    top: 120px;
+    text-align: center;
+    color: indianred;
+    font-weight: bold;
+}
+#circle.active{
+    left: 655px;
+}
+
+#shelter_1{
+    z-index: 100;
+    position:absolute;
+    left: 490px;
+    top: 180px;
+    text-align: center;
+    font-weight: bold;
+}
+#shelter_1.active{
+    left: 740px;
+}
+
 .canvas_icon {
     transition: all 0.3s;
 }
