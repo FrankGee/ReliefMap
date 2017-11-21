@@ -1,7 +1,6 @@
 #maps {
     margin-top: -99px;
 	z-index: 10;
-    display: relative;
 } 
 
 #maps > #base {
@@ -151,7 +150,6 @@ img.icon{
 #filters{
     margin-top: 25px;
     margin-left: 25px;
-    display: absolute;
     z-index: 81;
 }
 /*
