@@ -18,297 +18,287 @@
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 	<script src="resources/js/JSFunctions.js"></script>
 
-
-	<style>
-	.navbar{
-		margin-bottom:0px;
-	}
-	.navbar-btn{
-		margin-bottom:0px;
-	}
-</style>
 </head>
 <body>
 
 
-	<div class="wrapper">
-		<!-- Sidebar Holder -->
-		<nav id="sidebar" class="active">
-			<div class="sidebar-header">
-				<h3>Site Details</h3>
+<div class="wrapper">
+	<!-- Sidebar Holder -->
+	<nav id="sidebar" class="active">
+		<div class="sidebar-header">
+			<h3 id = "Target-title">Site Details</h3>
+		</div>
+
+		<ul class="list-unstyled components">
+			<p id="target-addr">1930 Ridge Avenue, Evanston, IL 60201</p>
+			<li class="active">
+				<a href="#SiteTypeSubmenu" data-toggle="collapse" aria-expanded="false">Site Type</a>
+				<ul class="collapse list-unstyled" id="SiteTypeSubmenu">
+					<li><a href="#" id="Target-Category-details">Basic first aid station.  Walk-ins Welcome.</a></li>
+				</ul>
+			</li>
+			<li>
+				<a href="#goodsSubmenu" data-toggle="collapse" aria-expanded="false">Goods</a>
+				<ul class="collapse list-unstyled" id="goodsSubmenu">
+					<li><a href="#" id="Target-Good-details-1">Over the Counter Medications</a></li>
+					<li><a href="#" id="Target-Good-details-2">Bandages</a></li>
+				</ul>
+			</li>
+			<li>
+				<a href="#servicesSubmenu" data-toggle="collapse" aria-expanded="false">Services</a>
+				<ul class="collapse list-unstyled" id="servicesSubmenu">
+					<li><a href="#" id="Target-Service-details-1">Nurses On Call</a></li>
+					<li><a href="#" id="Target-Service-details-2">Doctors On Call</a></li>
+				</ul>
+			</li>
+			<li>
+				<a href="#contactSubmenu" data-toggle="collapse" aria-expanded="false">Contact Info</a>
+				<ul class="collapse list-unstyled" id="contactSubmenu">
+					<li><a href="#" id="Contact-Name">Jeremy Gubman</a></li>
+					<li data-toggle="modal" data-target="#message_Modal"><a href="#"><b>MESSAGE ME!</b></a></li>
+				</ul>
+			</li>
+			<li>
+		</ul>
+
+		<ul class="list-unstyled CTAs">
+			<li><a id="get_directions">Get Directions</a></li>
+			<li><a data-toggle="modal" data-target="#new_destination" id="get_directions_m">Get Directions</a></li>
+			<li><a id="cancel_navigation">Cancel Navigation</a></li>
+		</ul>
+	</nav>
+
+	<div class="modal fade" id="message_Modal" role="dialog">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal">&times;</button>
+					<h4 class="modal-title">Message Us</h4>
+				</div>
+				<div class="modal-body">
+					<form id="contact-form" role="form">
+						<div class="messages"></div>
+						<div class="controls">
+							<div class="row">
+								<div class="col-md-6">
+									<div class="form-group">
+										<label for="form_name">Firstname *</label>
+										<input id="form_name" type="text" name="name" class="form-control" placeholder="Please enter your firstname *" required="required" data-error="Firstname is required.">
+										<div class="help-block with-errors"></div>
+									</div>
+								</div>
+								<div class="col-md-6">
+									<div class="form-group">
+										<label for="form_lastname">Lastname *</label>
+										<input id="form_lastname" type="text" name="surname" class="form-control" placeholder="Please enter your lastname *" required="required" data-error="Lastname is required.">
+										<div class="help-block with-errors"></div>
+									</div>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-md-6">
+									<div class="form-group">
+										<label for="form_email">Email *</label>
+										<input id="form_email" type="email" name="email" class="form-control" placeholder="Please enter your email *" required="required" data-error="Valid email is required.">
+										<div class="help-block with-errors"></div>
+									</div>
+								</div>
+								<div class="col-md-6">
+									<div class="form-group">
+										<label for="form_phone">Phone</label>
+										<input id="form_phone" type="tel" name="phone" class="form-control" placeholder="Please enter your phone">
+										<div class="help-block with-errors"></div>
+									</div>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-md-12">
+									<div class="form-group">
+										<label for="form_message">Message *</label>
+										<textarea id="form_message" name="message" class="form-control" placeholder="Message for me *" rows="4" required="required" data-error="Please,leave us a message."></textarea>
+										<div class="help-block with-errors"></div>
+									</div>
+								</div>
+								<div class="col-md-12">
+									<input type="submit" class="btn btn-success btn-send" value="Send message">
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-md-12">
+									<p class="text-muted"><strong>*</strong> These fields are required.</p>
+								</div>
+							</div>
+						</div>
+					</form>
+				</div>
 			</div>
+		</div>
+	</div>
 
-			<ul class="list-unstyled components">
-				<p id="target-addr">1930 Ridge Avenue, Evanston, IL 60201</p>
-				<li class="active">
-					<a href="#SiteTypeSubmenu" data-toggle="collapse" aria-expanded="false">Site Type</a>
-					<ul class="collapse list-unstyled" id="SiteTypeSubmenu">
-						<li><a href="#" id="Target-Category-details">Basic first aid station.  Walk-ins Welcome.</a></li>
-					</ul>
-				</li>
-				<li>
-					<a href="#goodsSubmenu" data-toggle="collapse" aria-expanded="false">Goods</a>
-					<ul class="collapse list-unstyled" id="goodsSubmenu">
-						<li><a href="#" id="Target-Good-details-1">Over the Counter Medications</a></li>
-						<li><a href="#" id="Target-Good-details-2">Bandages</a></li>
-					</ul>
-				</li>
-				<li>
-					<a href="#servicesSubmenu" data-toggle="collapse" aria-expanded="false">Services</a>
-					<ul class="collapse list-unstyled" id="servicesSubmenu">
-						<li><a href="#" id="Target-Service-details-1">Nurses On Call</a></li>
-						<li><a href="#" id="Target-Service-details-2">Doctors On Call</a></li>
-					</ul>
-				</li>
-				<li>
-					<a href="#contactSubmenu" data-toggle="collapse" aria-expanded="false">Contact Info</a>
-					<ul class="collapse list-unstyled" id="contactSubmenu">
-                        <li><a href="#" id="Contact-Name">Jeremy Gubman</a></li>
-						<li><a href="#" id="Contact-Phone">123-456-7890</a></li>
-                        <li data-toggle="modal" data-target="#message_Modal"><a href="#"><b>MESSAGE ME!</b></a></li>
-					</ul>
-				</li>
-				<li>
-			</ul>
+	<!-- Page Content Holder -->
+	<div id="content">
+		<nav class="navbar navbar-default">
+			<div class="container-fluid">
+				<div class="navbar-header">
+					<a class="navbar-brand" href="#"><span class="glyphicon glyphicon-screenshot"></span> ReliefMap</a>
+				</div>
 
-			<ul class="list-unstyled CTAs">
-				<li><a id="get_directions">Get Directions</a></li>
-				<li><a data-toggle="modal" data-target="#new_destination" id="get_directions_m">Get Directions</a></li>
-                <li><a id="cancel_navigation">Cancel Navigation</a></li>
-			</ul>
+				<ul class="nav navbar-nav">
+					<li class="dropdown">
+						<a href="#"  data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Weather </a>
+						<ul class="dropdown-menu">
+							<li><img src="resources/image/weather_icon.png" alt="Weather Icon" height="40px" width="40px"/>Cloudy</li>
+							<li>Clouds: Scattered</li>
+							<li>Temperature: 45</li>
+							<li>Visibility: 10km+</li>
+							<li>Wind: 3.1 m/s</li>
+						</ul>
+					</li>
+					<li data-toggle="modal" data-target="#contact_Modal"><a href="#">Contact us</a></li>
+				</ul>
+			</div>
 		</nav>
 
-		<div class="modal fade" id="message_Modal" role="dialog">
+
+		<!-- Filters Radio Buttons -->
+		<div id="filters">
+			<div class="btn-group" data-toggle="buttons">
+				<label id="all_icons" class="btn btn-primary active">
+					<input type="radio" checked autocomplete="off"> All
+				</label>
+				<label id="food_icons" class="btn btn-primary">
+					<input type="radio" checked autocomplete="off"> Food and Water
+				</label>
+				<label id="medication_icons" class="btn btn-primary">
+					<input type="radio" autocomplete="off"> Medication
+				</label>
+				<label id="supply_icons" class="btn btn-primary">
+					<input type="radio" autocomplete="off"> Shops
+				</label>
+				<label id="police_icons" class="btn btn-primary">
+					<input type="radio" autocomplete="off"> Police
+				</label>
+			</div>
+		</div>
+
+		<!-- Modal -->
+		<div class="modal fade" id="contact_Modal" role="dialog">
 			<div class="modal-dialog">
 				<div class="modal-content">
 					<div class="modal-header">
 						<button type="button" class="close" data-dismiss="modal">&times;</button>
-						<h4 class="modal-title">Message Us</h4>
+						<h4 class="modal-title">Contact Us</h4>
 					</div>
 					<div class="modal-body">
-						<form id="contact-form" role="form">
-							<div class="messages"></div>
-							<div class="controls">
-								<div class="row">
-									<div class="col-md-6">
-										<div class="form-group">
-											<label for="form_name">Firstname *</label>
-											<input id="form_name" type="text" name="name" class="form-control" placeholder="Please enter your firstname *" required="required" data-error="Firstname is required.">
-											<div class="help-block with-errors"></div>
-										</div>
-									</div>
-									<div class="col-md-6">
-										<div class="form-group">
-											<label for="form_lastname">Lastname *</label>
-											<input id="form_lastname" type="text" name="surname" class="form-control" placeholder="Please enter your lastname *" required="required" data-error="Lastname is required.">
-											<div class="help-block with-errors"></div>
-										</div>
-									</div>
-								</div>
-								<div class="row">
-									<div class="col-md-6">
-										<div class="form-group">
-											<label for="form_email">Email *</label>
-											<input id="form_email" type="email" name="email" class="form-control" placeholder="Please enter your email *" required="required" data-error="Valid email is required.">
-											<div class="help-block with-errors"></div>
-										</div>
-									</div>
-									<div class="col-md-6">
-										<div class="form-group">
-											<label for="form_phone">Phone</label>
-											<input id="form_phone" type="tel" name="phone" class="form-control" placeholder="Please enter your phone">
-											<div class="help-block with-errors"></div>
-										</div>
-									</div>
-								</div>
-								<div class="row">
-									<div class="col-md-12">
-										<div class="form-group">
-											<label for="form_message">Message *</label>
-											<textarea id="form_message" name="message" class="form-control" placeholder="Message for me *" rows="4" required="required" data-error="Please,leave us a message."></textarea>
-											<div class="help-block with-errors"></div>
-										</div>
-									</div>
-									<div class="col-md-12">
-										<input type="submit" class="btn btn-success btn-send" value="Send message">
-									</div>
-								</div>
-								<div class="row">
-									<div class="col-md-12">
-										<p class="text-muted"><strong>*</strong> These fields are required.</p>
-									</div>
-								</div>
-							</div>
-						</form>
+						<h4>Four Guys</h4>
+						<p>Email: fourguys@u.northwestern.edu</p>
+						<p>Phone: 847-123-456</p>
+						<p>Address:2120 Campus Dr, Evanston, IL 60208</p>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
 					</div>
 				</div>
 			</div>
 		</div>
 
-		<!-- Page Content Holder -->
-		<div id="content">
-			<nav class="navbar navbar-default">
-				<div class="container-fluid">
-					<div class="navbar-header">
-					<a class="navbar-brand" href="#"><span class="glyphicon glyphicon-screenshot"></span> ReliefMap</a>
+		<!-- ReNavigate Modal -->
+		<div class="modal fade" id="new_destination" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h5 class="modal-title" id="exampleModalLabel">Choose a new destination?</h5>
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+							<span aria-hidden="true">&times;</span>
+						</button>
 					</div>
-
-					<ul class="nav navbar-nav">
-						<li class="dropdown">
-							<a href="#"  data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Weather </a>
-							<ul class="dropdown-menu">
-								<li><img src="resources/image/weather_icon.png" alt="Weather Icon" height="40px" width="40px"/>Cloudy</li>
-								<li>Clouds: Scattered</li>
-								<li>Temperature: 45</li>
-								<li>Visibility: 10km+</li>
-								<li>Wind: 3.1 m/s</li>
-							</ul>
-						</li>
-						<li data-toggle="modal" data-target="#contact_Modal"><a href="#">Contact us</a></li>			
-					</ul>
-				</div>
-			</nav>
-
-
-			<!-- Filters Radio Buttons -->
-			<div id="filters">
-				<div class="btn-group" data-toggle="buttons">
-					<label id="all_icons" class="btn btn-primary active">
-						<input type="radio" checked autocomplete="off"> All
-					</label>
-					<label id="food_icons" class="btn btn-primary">
-						<input type="radio" checked autocomplete="off"> Food and Water
-					</label>
-					<label id="medication_icons" class="btn btn-primary">
-						<input type="radio" autocomplete="off"> Medication
-					</label>
-					<label id="supply_icons" class="btn btn-primary">
-						<input type="radio" autocomplete="off"> Shops
-					</label>
-					<label id="police_icons" class="btn btn-primary">
-						<input type="radio" autocomplete="off"> Police
-					</label>
-				</div>
-			</div>
-
-			<!-- Modal -->
-			<div class="modal fade" id="contact_Modal" role="dialog">
-				<div class="modal-dialog">
-					<div class="modal-content">
-						<div class="modal-header">
-							<button type="button" class="close" data-dismiss="modal">&times;</button>
-							<h4 class="modal-title">Contact Us</h4>
-						</div>
-						<div class="modal-body">
-							<h4>Four Guys</h4>
-							<p>Email: fourguys@u.northwestern.edu</p>
-							<p>Phone: 847-123-456</p>
-							<p>Address:2120 Campus Dr, Evanston, IL 60208</p>
-						</div>
-						<div class="modal-footer">
-							<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-						</div>
+					<div class="modal-body">
+						You're currently in the middle of a navigation.  Do you want to choose this as your new destination?
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-secondary" data-dismiss="modal">No</button>
+						<button id="renavigate" data-dismiss="modal" type="button" class="btn btn-primary">Yes</button>
 					</div>
 				</div>
 			</div>
+		</div>
 
-			<!-- ReNavigate Modal -->
-			<div class="modal fade" id="new_destination" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-			  <div class="modal-dialog" role="document">
-			    <div class="modal-content">
-			      <div class="modal-header">
-			        <h5 class="modal-title" id="exampleModalLabel">Choose a new destination?</h5>
-			        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-			          <span aria-hidden="true">&times;</span>
-			        </button>
-			      </div>
-			      <div class="modal-body">
-			        You're currently in the middle of a navigation.  Do you want to choose this as your new destination?
-			      </div>
-			      <div class="modal-footer">
-			        <button type="button" class="btn btn-secondary" data-dismiss="modal">No</button>
-			        <button id="renavigate" data-dismiss="modal" type="button" class="btn btn-primary">Yes</button>
-			      </div>
-			    </div>
-			  </div>
-			</div>
-			
-			<div id="current_location" class="canvas_icon">
-				<img class="icon" src="resources/image/icon-current_location.png" alt="Currents Album Cover"/>
-				<p>YOU ARE HERE</p>
-			</div>
+		<div id="current_location">
+			<img class="icon" src="resources/image/icon-current_location.png" alt="Currents Album Cover"/>
+			<p>YOU ARE HERE</p>
+		</div>
 
-			<div id="icon_first_aid1" class="canvas_icon">
-				<a href="#" title="First Aid" data-html="true" data-toggle="popover" data-placement="right"
-				data-content="Address: <br />630 Dartmouth Pl, Evanston, IL 60208<br/><br/> Provide First Aid Service">
+		<div id="icon_first_aid1" class="canvas_icon">
+			<a href="#" title="First Aid" data-html="true" data-toggle="popover" data-placement="right"
+			   data-content="Address: <br />630 Dartmouth Pl, Evanston, IL 60208<br/><br/> Provide First Aid Service">
 				<img class="icon" src="resources/image/first-aid-icon.png" alt="Currents Album Cover"/>
-				</a>
-			</div>
+			</a>
+		</div>
 
-			<div id="icon_first_aid2" class="canvas_icon">
-				<a href="#" title="First Aid" data-html="true" data-toggle="popover" data-placement="right"
-				data-content="Address: <br />1930 Ridge Ave, Evanston, IL 60201<br/><br/> Provide First Aid Service">
-					<img class="icon" src="resources/image/first-aid-icon.png" alt="Currents Album Cover"/>
-				</a>
-			</div>
+		<div id="icon_first_aid2" class="canvas_icon">
+			<a href="#" title="First Aid" data-html="true" data-toggle="popover" data-placement="right"
+			   data-content="Address: <br />1930 Ridge Ave, Evanston, IL 60201<br/><br/> Provide First Aid Service">
+				<img class="icon" src="resources/image/first-aid-icon.png" alt="Currents Album Cover"/>
+			</a>
+		</div>
 
-			<div id="icon_police" class="canvas_icon">
-				<a href="#" title="Police Department" data-html="true" data-toggle="popover" data-placement="right"
-				data-content="Address: <br />927 Noyes St, Evanston, IL 60201 <br/><br/>Temporary Police Office">
-					<img class="icon" src="resources/image/icon-police.png" alt="Currents Album Cover"/>
-				</a>
-			</div>
+		<div id="icon_police" class="canvas_icon">
+			<a href="#" title="Police Department" data-html="true" data-toggle="popover" data-placement="right"
+			   data-content="Address: <br />927 Noyes St, Evanston, IL 60201 <br/><br/>Temporary Police Office">
+				<img class="icon" src="resources/image/icon-police.png" alt="Currents Album Cover"/>
+			</a>
+		</div>
 
-			<div id="icon_food1" class="canvas_icon">
-				<a href="#" title="Food" data-html="true" data-toggle="popover" data-placement="right"
-				data-content="Address: <br />2040 Sheridan Rd, Evanston, IL 60208 <br /><br/>Menu:<br />Pizza, Drink ">
+		<div id="icon_food1" class="canvas_icon">
+			<a href="#" title="Food" data-html="true" data-toggle="popover" data-placement="right"
+			   data-content="Address: <br />2040 Sheridan Rd, Evanston, IL 60208 <br /><br/>Menu:<br />Pizza, Drink ">
 				<img class="icon" src="resources/image/food-icon.png" alt="Currents Album Cover" />
-				</a>
-			</div>
+			</a>
+		</div>
 
-			<div id="icon_food2" class="canvas_icon">
-				<a href="#" title="Food" data-html="true" data-toggle="popover" data-placement="right"
-				data-content="Address: <br />1999 Campus Dr, Evanston, IL 60208<br /><br/>Menu:<br />Gyro, Taco, Drink ">
-					<img class="icon" src="resources/image/food-icon.png" alt="Currents Album Cover" />
-				</a>
-			</div>
+		<div id="icon_food2" class="canvas_icon">
+			<a href="#" title="Food" data-html="true" data-toggle="popover" data-placement="right"
+			   data-content="Address: <br />1999 Campus Dr, Evanston, IL 60208<br /><br/>Menu:<br />Gyro, Taco, Drink ">
+				<img class="icon" src="resources/image/food-icon.png" alt="Currents Album Cover" />
+			</a>
+		</div>
 
-			<div id="icon_food3" class="canvas_icon">
-				<a href="#" title="Food" data-html="true" data-toggle="popover" data-placement="right"
-				data-content="Address: <br />2100 Ridge Ave, Evanston, IL 60201<br /><br/>Menu:<br />Bread, Drink ">
-					<img class="icon" src="resources/image/food-icon.png" alt="Currents Album Cover" />
-				</a>
-			</div>
+		<div id="icon_food3" class="canvas_icon">
+			<a href="#" title="Food" data-html="true" data-toggle="popover" data-placement="right"
+			   data-content="Address: <br />2100 Ridge Ave, Evanston, IL 60201<br /><br/>Menu:<br />Bread, Drink ">
+				<img class="icon" src="resources/image/food-icon.png" alt="Currents Album Cover" />
+			</a>
+		</div>
 
-			<div id="icon_food4" class="canvas_icon">
-				<a href="#" title="Food" data-html="true" data-toggle="popover" data-placement="right"
-				data-content="Address: <br />1507 Emerson St, Evanston, IL 60201 <br /><br/>Menu:<br />Pasta, Burger, Drink ">
-					<img class="icon" src="resources/image/food-icon.png" alt="Currents Album Cover" />
-				</a>
-			</div>
+		<div id="icon_food4" class="canvas_icon">
+			<a href="#" title="Food" data-html="true" data-toggle="popover" data-placement="right"
+			   data-content="Address: <br />1507 Emerson St, Evanston, IL 60201 <br /><br/>Menu:<br />Pasta, Burger, Drink ">
+				<img class="icon" src="resources/image/food-icon.png" alt="Currents Album Cover" />
+			</a>
+		</div>
 
 
-			<div id="icon_shop" class="canvas_icon">
-				<a href="#" title="Store" data-html="true" data-toggle="popover" data-placement="right"
-			data-content="Address: <br />1900 Orrington Ave Evanston, IL 60201<br /><br/>First-aid supplies, Household products, Pharmacy ">
-					<img class="icon" src="resources/image/icon-shopping-cart.png" alt="Currents Album Cover" />
-				</a>
-			</div>
-			
+		<div id="icon_shop" class="canvas_icon">
+			<a href="#" title="Store" data-html="true" data-toggle="popover" data-placement="right"
+			   data-content="Address: <br />1900 Orrington Ave Evanston, IL 60201<br /><br/>First-aid supplies, Household products, Pharmacy ">
+				<img class="icon" src="resources/image/icon-shopping-cart.png" alt="Currents Album Cover" />
+			</a>
+		</div>
 
-			<div id="maps">
-				<img src="resources/image/map.png" id="base" style="width: 1535px;height: 739px;">
-				<img src="resources/image/map_first_aid1.png" id="map_first_aid1" style="width: 1535px;height: 739px;">
-				<img src="resources/image/map_first_aid2.png" id="map_first_aid2" style="width: 1535px;height: 739px;">
-				<img src="resources/image/map_food1.png" id="map_food1" style="width: 1535px;height: 739px;">
-				<img src="resources/image/map_food2.png" id="map_food2" style="width: 1535px;height: 739px;">
-				<img src="resources/image/map_food3.png" id="map_food3" style="width: 1535px;height: 739px;">
-				<img src="resources/image/map_food4.png" id="map_food4" style="width: 1535px;height: 739px;">
-				<img src="resources/image/map_police.png" id="map_police" style="width: 1535px;height: 739px;">
-				<img src="resources/image/map_shop.png" id="map_shop" style="width: 1535px;height: 739px;">
-			</div>
+
+		<div id="maps">
+			<img src="resources/image/map.png" id="base" style="width: 1535px;height: 739px;">
+			<img src="resources/image/map_first_aid1.png" id="map_first_aid1" style="width: 1535px;height: 739px;">
+			<img src="resources/image/map_first_aid2.png" id="map_first_aid2" style="width: 1535px;height: 739px;">
+			<img src="resources/image/map_food1.png" id="map_food1" style="width: 1535px;height: 739px;">
+			<img src="resources/image/map_food2.png" id="map_food2" style="width: 1535px;height: 739px;">
+			<img src="resources/image/map_food3.png" id="map_food3" style="width: 1535px;height: 739px;">
+			<img src="resources/image/map_food4.png" id="map_food4" style="width: 1535px;height: 739px;">
+			<img src="resources/image/map_police.png" id="map_police" style="width: 1535px;height: 739px;">
+			<img src="resources/image/map_shop.png" id="map_shop" style="width: 1535px;height: 739px;">
 		</div>
 	</div>
+</div>
 </body>
 </html>
 

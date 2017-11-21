@@ -1,7 +1,10 @@
+/* ---------------------------------------------------
+    CONTENT STYLE
+----------------------------------------------------- */
 #maps {
     margin-top: -99px;
-	z-index: 10;
-} 
+    z-index: 10;
+}
 
 #maps > #base {
     display: block;
@@ -122,9 +125,13 @@
     text-align: center;
     color: indianred;
     font-weight: bold;
+    transition: all 0.3s;
+
+
 }
 #current_location.active{
     left: 800px;
+    transition: all 0.3s;
 }
 
 .canvas_icon {
@@ -152,10 +159,16 @@ img.icon{
     margin-left: 25px;
     z-index: 81;
 }
-/*
-    DEMO STYLE
-*/
-/*@import "https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700";*/
+
+/* ---------------------------------------------------
+    Navigation bar STYLE
+----------------------------------------------------- */
+.navbar{
+    margin-bottom:0px;
+}
+.navbar-btn{
+    margin-bottom:0px;
+}
 
 
 /* ---------------------------------------------------
@@ -203,8 +216,6 @@ img.icon{
 
 #sidebar ul li.active > a, a[aria-expanded="true"] {
 }
-
-
 
 
 a[data-toggle="collapse"] {
@@ -260,10 +271,7 @@ a.download {
 /* ---------------------------------------------------
     CONTENT STYLE
 ----------------------------------------------------- */
-/*#content {
-    min-height: 100vh;
-    transition: all 0.3s;
-}*/
+
 
 /* ---------------------------------------------------
     MEDIAQUERIES

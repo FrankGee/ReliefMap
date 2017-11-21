@@ -5,14 +5,16 @@ $(document).ready(function(){
 var destination = "#base";
 var currMap = "#base"
 var sidebarOn = false;
+var prevDest = '';
 var selectedDest = '';
 var inTransit = false;
 
 $(document).ready(function () {
     $('.canvas_icon').click(function () {
-     	if ($('#sidebar').hasClass('active')){
-     		$('#sidebar').removeClass('active');
-        	$('.canvas_icon').addClass('active');   
+        if ($('#sidebar').hasClass('active')){
+            $('#sidebar').removeClass('active');
+            $('.canvas_icon').addClass('active');
+            $("#current_location").addClass('active');
         }
 
         destination = $(this).attr('id');
@@ -20,7 +22,7 @@ $(document).ready(function () {
             case "icon_first_aid1":
                 destination = "#map_first_aid1";
                 selectedDest = '#icon_first_aid1 .icon';
-                
+                document.getElementById("Target-title").innerHTML = "First-aid";
                 document.getElementById("target-addr").innerHTML = "630 Dartmouth Pl, Evanston, IL 60208";
                 document.getElementById("Target-Category-details").innerHTML = "Basic first aid station.  Walk-ins Welcome.";
                 document.getElementById("Target-Good-details-1").innerHTML = "Bandages, Asprine";
@@ -28,87 +30,99 @@ $(document).ready(function () {
                 document.getElementById("Target-Service-details-1").innerHTML = "First Aid";
                 document.getElementById("Target-Service-details-2").innerHTML = "Bleeding and Pain mitigation";
                 document.getElementById("Contact-Name").innerHTML = "Jeremy Gubman";
-                document.getElementById("Contact-Phone").innerHTML = "123-456-7890";
-                
+                $(selectedDest).css({'border': '5px outset coral'});
+
                 break;
             case "icon_first_aid2":
                 destination = "#map_first_aid2";
-                selectedDest = '#icon_first_aid2 .icon';    
-                
+                selectedDest = '#icon_first_aid2 .icon';
+                document.getElementById("Target-title").innerHTML = "First-aid";
                 document.getElementById("target-addr").innerHTML = "1930 Ridge Avenue, Evanston, IL 60201";
                 document.getElementById("Target-Category-details").innerHTML = "Medication for woundeds and injuries up to intermediate level";
-                document.getElementById("Target-Good-details-1").innerHTML = "Asprine, Basic Medicines, Oxygen Supply";
+                document.getElementById("Target-Good-details-1").innerHTML = "Asprine, Basic Medicines";
                 document.getElementById("Target-Good-details-2").innerHTML = "Purified Water, Hydrogen Peroxide";
                 document.getElementById("Target-Service-details-1").innerHTML = "Injury examination";
                 document.getElementById("Target-Service-details-2").innerHTML = "Intermediate Medicare";
                 document.getElementById("Contact-Name").innerHTML = "Jeremy Gubman";
-                document.getElementById("Contact-Phone").innerHTML = "123-456-7890";
-                
+                $(selectedDest).css({'border': '5px outset coral'});
+
+
                 break;
             case "icon_food1":
                 destination = "#map_food1";
                 selectedDest = '#icon_food1 .icon';
+                document.getElementById("Target-title").innerHTML = "Restaurant";
                 document.getElementById("target-addr").innerHTML = "2040 Sheridan Rd, Evanston, IL 60208";
                 document.getElementById("Target-Category-details").innerHTML = "Available foods and drinks for life sustaining";
-                document.getElementById("Target-Good-details-1").innerHTML = "Meat, Vegetables, Bread";
+                document.getElementById("Target-Good-details-1").innerHTML = "Pizza";
                 document.getElementById("Target-Good-details-2").innerHTML = "Purified Water, Soft Drink";
-                document.getElementById("Target-Service-details-1").innerHTML = "None";
+                document.getElementById("Target-Service-details-1").innerHTML = "Food serving";
                 document.getElementById("Target-Service-details-2").innerHTML = "";
                 document.getElementById("Contact-Name").innerHTML = "Gan Fang";
-                document.getElementById("Contact-Phone").innerHTML = "987-654-3210";
-                
+                $(selectedDest).css({'border': '5px outset coral'});
+
+
                 break;
             case "icon_food2":
                 destination = "#map_food2";
                 selectedDest = '#icon_food2 .icon';
+                document.getElementById("Target-title").innerHTML = "Restaurant";
                 document.getElementById("target-addr").innerHTML = "1999 Campus Dr, Evanston, IL 60208";
                 document.getElementById("Target-Category-details").innerHTML = "Available foods and drinks for life sustaining";
-                document.getElementById("Target-Good-details-1").innerHTML = "Bagles, Vegetables, Bread, Meat, Biscuits";
+                document.getElementById("Target-Good-details-1").innerHTML = "Gyro, Taco";
                 document.getElementById("Target-Good-details-2").innerHTML = "Purified Water, Soft Drink, Coffee";
-                document.getElementById("Target-Service-details-1").innerHTML = "None";
+                document.getElementById("Target-Service-details-1").innerHTML = "Food serving";
                 document.getElementById("Target-Service-details-2").innerHTML = "";
                 document.getElementById("Contact-Name").innerHTML = "Gan Fang";
-                document.getElementById("Contact-Phone").innerHTML = "987-654-3210";
+                $(selectedDest).css({'border': '5px outset coral'});
+
                 break;
             case "icon_food3":
                 destination = "#map_food3";
                 selectedDest = '#icon_food3 .icon';
+                document.getElementById("Target-title").innerHTML = "Restaurant";
                 document.getElementById("target-addr").innerHTML = "2100 Ridge Ave, Evanston, IL 60201";
                 document.getElementById("Target-Category-details").innerHTML = "Available foods and drinks for life sustaining";
-                document.getElementById("Target-Good-details-1").innerHTML = "Spagetti, Fried Rice";
+                document.getElementById("Target-Good-details-1").innerHTML = "Bread";
                 document.getElementById("Target-Good-details-2").innerHTML = "Hot Water, Hot Tea";
                 document.getElementById("Target-Service-details-1").innerHTML = "Cooking Services";
                 document.getElementById("Target-Service-details-2").innerHTML = "Baby Care";
                 document.getElementById("Contact-Name").innerHTML = "Gan Fang";
-                document.getElementById("Contact-Phone").innerHTML = "987-654-3210";
+                $(selectedDest).css({'border': '5px outset coral'});
+
                 break;
             case "icon_food4":
                 destination = "#map_food4";
                 selectedDest = '#icon_food4 .icon';
+                document.getElementById("Target-title").innerHTML = "Restaurant";
                 document.getElementById("target-addr").innerHTML = "1507 Emerson St, Evanston, IL 60201";
                 document.getElementById("Target-Category-details").innerHTML = "Available foods and drinks for life sustaining";
-                document.getElementById("Target-Good-details-1").innerHTML = "Meat, Vegetables, Bread";
+                document.getElementById("Target-Good-details-1").innerHTML = "Pasta, Burger";
                 document.getElementById("Target-Good-details-2").innerHTML = "Purified Water, Soft Drink";
-                document.getElementById("Target-Service-details-1").innerHTML = "None";
+                document.getElementById("Target-Service-details-1").innerHTML = "Food serving";
                 document.getElementById("Target-Service-details-2").innerHTML = "";
                 document.getElementById("Contact-Name").innerHTML = "Gan Fang";
-                document.getElementById("Contact-Phone").innerHTML = "987-654-3210";
+                $(selectedDest).css({'border': '5px outset coral'});
+
                 break;
             case "icon_shop":
                 destination = "#map_shop";
                 selectedDest = '#icon_shop .icon';
+                document.getElementById("Target-title").innerHTML = "Store";
                 document.getElementById("target-addr").innerHTML = "1900 Orrington Ave Evanston, IL 60201";
                 document.getElementById("Target-Category-details").innerHTML = "Grocery Store that stores most kinds of foods, drinks, tools, clothes";
-                document.getElementById("Target-Good-details-1").innerHTML = "Foods, Drinks";
-                document.getElementById("Target-Good-details-2").innerHTML = "Repairing Tools, Clothes, Bicycles";
+                document.getElementById("Target-Good-details-1").innerHTML = "Foods, Drinks, Pharmacy";
+                document.getElementById("Target-Good-details-2").innerHTML = "First-aid supplies, Repairing Tools, Clothes, Bicycles";
                 document.getElementById("Target-Service-details-1").innerHTML = "Repairing Services";
                 document.getElementById("Target-Service-details-2").innerHTML = "Refueling";
                 document.getElementById("Contact-Name").innerHTML = "Jiahua Chen";
-                document.getElementById("Contact-Phone").innerHTML = "888-666-6688";
+                $(selectedDest).css({'border': '5px outset coral'});
+
                 break;
             case "icon_police":
                 destination = "#map_police";
                 selectedDest = '#icon_police .icon';
+                document.getElementById("Target-title").innerHTML = "Police Office";
                 document.getElementById("target-addr").innerHTML = "927 Noyes St, Evanston, IL 60201";
                 document.getElementById("Target-Category-details").innerHTML = "Police Station that provides help in emergency";
                 document.getElementById("Target-Good-details-1").innerHTML = "Purified Water";
@@ -116,13 +130,13 @@ $(document).ready(function () {
                 document.getElementById("Target-Service-details-1").innerHTML = "Information Service";
                 document.getElementById("Target-Service-details-2").innerHTML = "Satellite Phone";
                 document.getElementById("Contact-Name").innerHTML = "Yani Xie";
-                document.getElementById("Contact-Phone").innerHTML = "321-789-4506";
+                $(selectedDest).css({'border': '5px outset coral'});
+
                 break;
+
             default:
                 destination = "#base";
                 selectedDest = '';
-                $(selectedDest).css({'border': 'none'});
-                
                 document.getElementById("target-addr").innerHTML = "Current Location";
                 document.getElementById("Target-Category-details").innerHTML = "";
                 document.getElementById("Target-Good-details-1").innerHTML = "";
@@ -131,9 +145,10 @@ $(document).ready(function () {
                 document.getElementById("Target-Service-details-2").innerHTML = "";
                 document.getElementById("Contact-Name").innerHTML = "";
                 document.getElementById("Contact-Phone").innerHTML = "";
-                
                 break;
         }
+
+
         if ((destination === currMap) && inTransit) {
             $("#get_directions").css("display", "none");
             $("#get_directions_m").css("display", "none");
@@ -143,6 +158,13 @@ $(document).ready(function () {
             $("#get_directions_m").css("display", "block");
             $("#cancel_navigation").css("display", "block");
         }
+
+        if (prevDest!=selectedDest){
+            $(prevDest).css({'border': 'none'});
+            $(selectedDest).css({'border': '5px outset coral'});
+        }
+        prevDest = selectedDest;
+
         sidebarOn = true;
         disablePopOver(true);
 
@@ -177,12 +199,14 @@ function disablePopOver(choice){
 function hideSidebar(){
     $(document).ready(function() {
         sidebarOn = false;
+
         disablePopOver(false)
         if ($('#sidebar').hasClass('active') == false) {
             $('#sidebar').addClass('active');
             $('.canvas_icon').removeClass('active');
+            $("#current_location").removeClass('active');
         }
-     });
+    });
     $(destination).css("display", "none");
     $("#base").css("display", "block");
     destination = null;
@@ -228,7 +252,7 @@ $(document).ready(function () {
         $("#cancel_navigation").css("display", "none");
         inTransit = false;
     });
-    
+
 });
 
 $(document).ready(function () {
@@ -237,89 +261,89 @@ $(document).ready(function () {
             hideSidebar();
         }
     });
-    
+
 });
 
 
 $(document).ready(function () {
 
-     $("#food_icons").on("click", function() {
+    $("#food_icons").on("click", function() {
         console.log("food filter pressed");
-         $("#base").toggle(true);
-         hideSidebar();
+        $("#base").toggle(true);
+        hideSidebar();
 
-         $("#icon_first_aid1").toggle(false);
-         $("#icon_first_aid2").toggle(false);
-         $("#icon_shop").toggle(false);
-         $("#icon_police").toggle(false);
- 
-         $("#icon_food1").toggle(true);
-         $("#icon_food2").toggle(true);
-         $("#icon_food3").toggle(true);
-         $("#icon_food4").toggle(true);
-     });
- 
-     $("#medication_icons").on("click", function() {
-         $("#base").toggle(true);
-         hideSidebar();
+        $("#icon_first_aid1").toggle(false);
+        $("#icon_first_aid2").toggle(false);
+        $("#icon_shop").toggle(false);
+        $("#icon_police").toggle(false);
 
-         $("#icon_shop").toggle(false);
-         $("#icon_police").toggle(false);
-         $("#icon_food1").toggle(false);
-         $("#icon_food2").toggle(false);
-         $("#icon_food3").toggle(false);
-         $("#icon_food4").toggle(false);
- 
-         $("#icon_first_aid1").toggle(true);
-         $("#icon_first_aid2").toggle(true);
-     });
- 
-     $("#supply_icons").on("click", function() {
-         $("#base").toggle(true);
-         hideSidebar();
+        $("#icon_food1").toggle(true);
+        $("#icon_food2").toggle(true);
+        $("#icon_food3").toggle(true);
+        $("#icon_food4").toggle(true);
+    });
 
-         $("#icon_first_aid1").toggle(false);
-         $("#icon_first_aid2").toggle(false);
-         $("#icon_police").toggle(false);
-         $("#icon_food1").toggle(false);
-         $("#icon_food2").toggle(false);
-         $("#icon_food3").toggle(false);
-         $("#icon_food4").toggle(false);
- 
-         $("#icon_shop").toggle(true);
- 
- 
-     });
- 
-     $("#police_icons").on("click", function() {
-         $("#base").toggle(true);
-         hideSidebar();
+    $("#medication_icons").on("click", function() {
+        $("#base").toggle(true);
+        hideSidebar();
 
-         $("#icon_first_aid1").toggle(false);
-         $("#icon_first_aid2").toggle(false);
-         $("#icon_food1").toggle(false);
-         $("#icon_food2").toggle(false);
-         $("#icon_food3").toggle(false);
-         $("#icon_food4").toggle(false);
-         $("#icon_shop").toggle(false);
- 
-         $("#icon_police").toggle(true);
- 
-     });
- 
- 
-     $("#all_icons").on("click", function() {
-         $("#base").toggle(true);
-         hideSidebar();
+        $("#icon_shop").toggle(false);
+        $("#icon_police").toggle(false);
+        $("#icon_food1").toggle(false);
+        $("#icon_food2").toggle(false);
+        $("#icon_food3").toggle(false);
+        $("#icon_food4").toggle(false);
 
-         $("#icon_first_aid1").toggle(true);
-         $("#icon_first_aid2").toggle(true);
-         $("#icon_food1").toggle(true);
-         $("#icon_food2").toggle(true);
-         $("#icon_food3").toggle(true);
-         $("#icon_food4").toggle(true);
-         $("#icon_shop").toggle(true);
-         $("#icon_police").toggle(true);
-     });
- 
- });
+        $("#icon_first_aid1").toggle(true);
+        $("#icon_first_aid2").toggle(true);
+    });
+
+    $("#supply_icons").on("click", function() {
+        $("#base").toggle(true);
+        hideSidebar();
+
+        $("#icon_first_aid1").toggle(false);
+        $("#icon_first_aid2").toggle(false);
+        $("#icon_police").toggle(false);
+        $("#icon_food1").toggle(false);
+        $("#icon_food2").toggle(false);
+        $("#icon_food3").toggle(false);
+        $("#icon_food4").toggle(false);
+
+        $("#icon_shop").toggle(true);
+
+
+    });
+
+    $("#police_icons").on("click", function() {
+        $("#base").toggle(true);
+        hideSidebar();
+
+        $("#icon_first_aid1").toggle(false);
+        $("#icon_first_aid2").toggle(false);
+        $("#icon_food1").toggle(false);
+        $("#icon_food2").toggle(false);
+        $("#icon_food3").toggle(false);
+        $("#icon_food4").toggle(false);
+        $("#icon_shop").toggle(false);
+
+        $("#icon_police").toggle(true);
+
+    });
+
+
+    $("#all_icons").on("click", function() {
+        $("#base").toggle(true);
+        hideSidebar();
+
+        $("#icon_first_aid1").toggle(true);
+        $("#icon_first_aid2").toggle(true);
+        $("#icon_food1").toggle(true);
+        $("#icon_food2").toggle(true);
+        $("#icon_food3").toggle(true);
+        $("#icon_food4").toggle(true);
+        $("#icon_shop").toggle(true);
+        $("#icon_police").toggle(true);
+    });
+
+});
