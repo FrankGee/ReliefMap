@@ -15,6 +15,7 @@ $(document).ready(function () {
             $('#sidebar').removeClass('active');
             $('.canvas_icon').addClass('active');
             $("#current_location").addClass('active');
+            $("#circle").addClass('active');
         }
 
         destination = $(this).attr('id');
@@ -31,7 +32,6 @@ $(document).ready(function () {
                 document.getElementById("Target-Service-details-2").innerHTML = "Bleeding and Pain mitigation";
                 document.getElementById("Contact-Name").innerHTML = "Jeremy Gubman";
                 $(selectedDest).css({'border': '5px outset coral'});
-
                 break;
             case "icon_first_aid2":
                 destination = "#map_first_aid2";
@@ -45,8 +45,6 @@ $(document).ready(function () {
                 document.getElementById("Target-Service-details-2").innerHTML = "Intermediate Medicare";
                 document.getElementById("Contact-Name").innerHTML = "Jeremy Gubman";
                 $(selectedDest).css({'border': '5px outset coral'});
-
-
                 break;
             case "icon_food1":
                 destination = "#map_food1";
@@ -60,8 +58,6 @@ $(document).ready(function () {
                 document.getElementById("Target-Service-details-2").innerHTML = "";
                 document.getElementById("Contact-Name").innerHTML = "Gan Fang";
                 $(selectedDest).css({'border': '5px outset coral'});
-
-
                 break;
             case "icon_food2":
                 destination = "#map_food2";
@@ -75,7 +71,6 @@ $(document).ready(function () {
                 document.getElementById("Target-Service-details-2").innerHTML = "";
                 document.getElementById("Contact-Name").innerHTML = "Gan Fang";
                 $(selectedDest).css({'border': '5px outset coral'});
-
                 break;
             case "icon_food3":
                 destination = "#map_food3";
@@ -89,7 +84,6 @@ $(document).ready(function () {
                 document.getElementById("Target-Service-details-2").innerHTML = "Baby Care";
                 document.getElementById("Contact-Name").innerHTML = "Gan Fang";
                 $(selectedDest).css({'border': '5px outset coral'});
-
                 break;
             case "icon_food4":
                 destination = "#map_food4";
@@ -103,7 +97,6 @@ $(document).ready(function () {
                 document.getElementById("Target-Service-details-2").innerHTML = "";
                 document.getElementById("Contact-Name").innerHTML = "Gan Fang";
                 $(selectedDest).css({'border': '5px outset coral'});
-
                 break;
             case "icon_shop":
                 destination = "#map_shop";
@@ -117,7 +110,6 @@ $(document).ready(function () {
                 document.getElementById("Target-Service-details-2").innerHTML = "Refueling";
                 document.getElementById("Contact-Name").innerHTML = "Jiahua Chen";
                 $(selectedDest).css({'border': '5px outset coral'});
-
                 break;
             case "icon_police":
                 destination = "#map_police";
@@ -131,7 +123,6 @@ $(document).ready(function () {
                 document.getElementById("Target-Service-details-2").innerHTML = "Satellite Phone";
                 document.getElementById("Contact-Name").innerHTML = "Yani Xie";
                 $(selectedDest).css({'border': '5px outset coral'});
-
                 break;
             
             case "shelter_1":
@@ -219,6 +210,8 @@ function hideSidebar(){
             $('#sidebar').addClass('active');
             $('.canvas_icon').removeClass('active');
             $("#current_location").removeClass('active');
+            $("#circle").removeClass('active');
+
         }
     });
     $(destination).css("display", "none");

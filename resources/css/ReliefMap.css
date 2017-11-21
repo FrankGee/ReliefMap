@@ -154,9 +154,13 @@
     text-align: center;
     color: indianred;
     font-weight: bold;
+    transition: all 0.3s;
+
 }
 #circle.active{
     left: 655px;
+    transition: all 0.3s;
+
 }
 
 #shelter_1{
@@ -166,6 +170,10 @@
     top: 180px;
     text-align: center;
     font-weight: bold;
+    background-color: turquoise;
+    border-radius: 15px;
+
+
 }
 #shelter_1.active{
     left: 740px;
@@ -205,6 +213,9 @@ img.icon{
 }
 .navbar-btn{
     margin-bottom:0px;
+}
+#Emergency_Contact_Button{
+    margin-top:8px;
 }
 
 
