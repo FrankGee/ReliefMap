@@ -37,8 +37,8 @@ $(document).ready(function () {
                 
                 document.getElementById("target-addr").innerHTML = "1930 Ridge Avenue, Evanston, IL 60201";
                 document.getElementById("Target-Category-details").innerHTML = "Medication for woundeds and injuries up to intermediate level";
-                document.getElementById("Target-Good-details-1").innerHTML = "Asprine, Basic Medicines, O2 Supply";
-                document.getElementById("Target-Good-details-2").innerHTML = "Purified Water, H2O2";
+                document.getElementById("Target-Good-details-1").innerHTML = "Asprine, Basic Medicines, Oxygen Supply";
+                document.getElementById("Target-Good-details-2").innerHTML = "Purified Water, Hydrogen Peroxide";
                 document.getElementById("Target-Service-details-1").innerHTML = "Injury examination";
                 document.getElementById("Target-Service-details-2").innerHTML = "Intermediate Medicare";
                 document.getElementById("Contact-Name").innerHTML = "Jeremy Gubman";
