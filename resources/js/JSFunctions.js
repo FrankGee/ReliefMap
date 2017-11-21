@@ -20,39 +20,118 @@ $(document).ready(function () {
             case "icon_first_aid1":
                 destination = "#map_first_aid1";
                 selectedDest = '#icon_first_aid1 .icon';
+                
+                document.getElementById("target-addr").innerHTML = "630 Dartmouth Pl, Evanston, IL 60208";
+                document.getElementById("Target-Category-details").innerHTML = "Basic first aid station.  Walk-ins Welcome.";
+                document.getElementById("Target-Good-details-1").innerHTML = "Bandages, Asprine";
+                document.getElementById("Target-Good-details-2").innerHTML = "Purified Water";
+                document.getElementById("Target-Service-details-1").innerHTML = "First Aid";
+                document.getElementById("Target-Service-details-2").innerHTML = "Bleeding and Pain mitigation";
+                document.getElementById("Contact-Name").innerHTML = "Jeremy Gubman";
+                document.getElementById("Contact-Phone").innerHTML = "123-456-7890";
+                
                 break;
             case "icon_first_aid2":
                 destination = "#map_first_aid2";
-                selectedDest = '#icon_first_aid2 .icon';
+                selectedDest = '#icon_first_aid2 .icon';    
+                
+                document.getElementById("target-addr").innerHTML = "1930 Ridge Avenue, Evanston, IL 60201";
+                document.getElementById("Target-Category-details").innerHTML = "Medication for woundeds and injuries up to intermediate level";
+                document.getElementById("Target-Good-details-1").innerHTML = "Asprine, Basic Medicines, O2 Supply";
+                document.getElementById("Target-Good-details-2").innerHTML = "Purified Water, H2O2";
+                document.getElementById("Target-Service-details-1").innerHTML = "Injury examination";
+                document.getElementById("Target-Service-details-2").innerHTML = "Intermediate Medicare";
+                document.getElementById("Contact-Name").innerHTML = "Jeremy Gubman";
+                document.getElementById("Contact-Phone").innerHTML = "123-456-7890";
+                
                 break;
             case "icon_food1":
                 destination = "#map_food1";
                 selectedDest = '#icon_food1 .icon';
+                document.getElementById("target-addr").innerHTML = "2040 Sheridan Rd, Evanston, IL 60208";
+                document.getElementById("Target-Category-details").innerHTML = "Available foods and drinks for life sustaining";
+                document.getElementById("Target-Good-details-1").innerHTML = "Meat, Vegetables, Bread";
+                document.getElementById("Target-Good-details-2").innerHTML = "Purified Water, Soft Drink";
+                document.getElementById("Target-Service-details-1").innerHTML = "None";
+                document.getElementById("Target-Service-details-2").innerHTML = "";
+                document.getElementById("Contact-Name").innerHTML = "Gan Fang";
+                document.getElementById("Contact-Phone").innerHTML = "987-654-3210";
+                
                 break;
             case "icon_food2":
                 destination = "#map_food2";
                 selectedDest = '#icon_food2 .icon';
+                document.getElementById("target-addr").innerHTML = "1999 Campus Dr, Evanston, IL 60208";
+                document.getElementById("Target-Category-details").innerHTML = "Available foods and drinks for life sustaining";
+                document.getElementById("Target-Good-details-1").innerHTML = "Bagles, Vegetables, Bread, Meat, Biscuits";
+                document.getElementById("Target-Good-details-2").innerHTML = "Purified Water, Soft Drink, Coffee";
+                document.getElementById("Target-Service-details-1").innerHTML = "None";
+                document.getElementById("Target-Service-details-2").innerHTML = "";
+                document.getElementById("Contact-Name").innerHTML = "Gan Fang";
+                document.getElementById("Contact-Phone").innerHTML = "987-654-3210";
                 break;
             case "icon_food3":
                 destination = "#map_food3";
                 selectedDest = '#icon_food3 .icon';
+                document.getElementById("target-addr").innerHTML = "2100 Ridge Ave, Evanston, IL 60201";
+                document.getElementById("Target-Category-details").innerHTML = "Available foods and drinks for life sustaining";
+                document.getElementById("Target-Good-details-1").innerHTML = "Spagetti, Fried Rice";
+                document.getElementById("Target-Good-details-2").innerHTML = "Hot Water, Hot Tea";
+                document.getElementById("Target-Service-details-1").innerHTML = "Cooking Services";
+                document.getElementById("Target-Service-details-2").innerHTML = "Baby Care";
+                document.getElementById("Contact-Name").innerHTML = "Gan Fang";
+                document.getElementById("Contact-Phone").innerHTML = "987-654-3210";
                 break;
             case "icon_food4":
                 destination = "#map_food4";
                 selectedDest = '#icon_food4 .icon';
+                document.getElementById("target-addr").innerHTML = "1507 Emerson St, Evanston, IL 60201";
+                document.getElementById("Target-Category-details").innerHTML = "Available foods and drinks for life sustaining";
+                document.getElementById("Target-Good-details-1").innerHTML = "Meat, Vegetables, Bread";
+                document.getElementById("Target-Good-details-2").innerHTML = "Purified Water, Soft Drink";
+                document.getElementById("Target-Service-details-1").innerHTML = "None";
+                document.getElementById("Target-Service-details-2").innerHTML = "";
+                document.getElementById("Contact-Name").innerHTML = "Gan Fang";
+                document.getElementById("Contact-Phone").innerHTML = "987-654-3210";
                 break;
             case "icon_shop":
                 destination = "#map_shop";
                 selectedDest = '#icon_shop .icon';
+                document.getElementById("target-addr").innerHTML = "1900 Orrington Ave Evanston, IL 60201";
+                document.getElementById("Target-Category-details").innerHTML = "Grocery Store that stores most kinds of foods, drinks, tools, clothes";
+                document.getElementById("Target-Good-details-1").innerHTML = "Foods, Drinks";
+                document.getElementById("Target-Good-details-2").innerHTML = "Repairing Tools, Clothes, Bicycles";
+                document.getElementById("Target-Service-details-1").innerHTML = "Repairing Services";
+                document.getElementById("Target-Service-details-2").innerHTML = "Refueling";
+                document.getElementById("Contact-Name").innerHTML = "Jiahua Chen";
+                document.getElementById("Contact-Phone").innerHTML = "888-666-6688";
                 break;
             case "icon_police":
                 destination = "#map_police";
                 selectedDest = '#icon_police .icon';
+                document.getElementById("target-addr").innerHTML = "927 Noyes St, Evanston, IL 60201";
+                document.getElementById("Target-Category-details").innerHTML = "Police Station that provides help in emergency";
+                document.getElementById("Target-Good-details-1").innerHTML = "Purified Water";
+                document.getElementById("Target-Good-details-2").innerHTML = "Maps";
+                document.getElementById("Target-Service-details-1").innerHTML = "Information Service";
+                document.getElementById("Target-Service-details-2").innerHTML = "Satellite Phone";
+                document.getElementById("Contact-Name").innerHTML = "Yani Xie";
+                document.getElementById("Contact-Phone").innerHTML = "321-789-4506";
                 break;
             default:
                 destination = "#base";
                 selectedDest = '';
                 $(selectedDest).css({'border': 'none'});
+                
+                document.getElementById("target-addr").innerHTML = "Current Location";
+                document.getElementById("Target-Category-details").innerHTML = "";
+                document.getElementById("Target-Good-details-1").innerHTML = "";
+                document.getElementById("Target-Good-details-2").innerHTML = "";
+                document.getElementById("Target-Service-details-1").innerHTML = "";
+                document.getElementById("Target-Service-details-2").innerHTML = "";
+                document.getElementById("Contact-Name").innerHTML = "";
+                document.getElementById("Contact-Phone").innerHTML = "";
+                
                 break;
         }
         if ((destination === currMap) && inTransit) {
