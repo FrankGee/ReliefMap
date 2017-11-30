@@ -147,20 +147,27 @@
 					</div>
 					<div class="modal-body">
 						<form id="emergency-form" role="form">
-							<div class="messages"></div>
+							<div class="messages">If you are unable to reach any of the destinations near you on this map, use this form to notify our ReliefMap Team.  We will attempt to coordinate with volunteers at a site near you, and send a team to your location to assist you.</div>
 							<div class="controls">
 								<div class="row">
-									<div class="col-md-6">
+									<div class="col-md-4">
 										<div class="form-group">
-											<label for="form_name">Your Name *</label>
-											<input id="form2_name" type="text" name="name" class="form-control" placeholder="Please enter your firstname *" required="required" data-error="Firstname is required.">
+											<label for="form_name">Name *</label>
+											<input id="form2_name" type="text" name="name" class="form-control" placeholder="Name" required="required" data-error="Name Field is required.">
 											<div class="help-block with-errors"></div>
 										</div>
 									</div>
-									<div class="col-md-6">
+									<div class="col-md-4">
 										<div class="form-group">
-											<label for="form_lastname">Number *</label>
-											<input id="form2_lastname" type="text" name="surname" class="form-control" placeholder="Please enter your lastname *" required="required" data-error="Lastname is required.">
+											<label for="form_phone">Phone</label>
+											<input id="form2_phone" type="text" name="phone" class="form-control" placeholder="(XXX)-XXX-XXXX">
+											<div class="help-block with-errors"></div>
+										</div>
+									</div>
+									<div class="col-md-4">
+										<div class="form-group">
+											<label for="form_email">Email</label>
+											<input id="form2_email" type="text" name="surname" class="form-control" placeholder="email@address.com">
 											<div class="help-block with-errors"></div>
 										</div>
 									</div>
@@ -169,8 +176,8 @@
 								<div class="row">
 									<div class="col-md-12">
 										<div class="form-group">
-											<label for="form_message">Message *</label>
-											<textarea id="form2_message" name="message" class="form-control" placeholder="Message to send" rows="4" required="required" data-error="Please,leave us a message."></textarea>
+											<label for="form_message">Message</label>
+											<textarea id="form2_message" name="message" class="form-control" placeholder="If you're able, provide a description of your circumstance, as well as anyone around you also in need of assistance." rows="4"></textarea>
 											<div class="help-block with-errors"></div>
 										</div>
 									</div>
